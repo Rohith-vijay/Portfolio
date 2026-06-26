@@ -18,9 +18,11 @@ import { Skills } from "./sections/Skills";
 import { Projects } from "./sections/Projects";
 import { TrustShowcase } from "./sections/TrustShowcase";
 import { Experience } from "./sections/Experience";
+import { LeadershipSocialImpact } from "./sections/LeadershipSocialImpact";
 import { Certifications } from "./sections/Certifications";
 import { GitHubStats } from "./sections/GitHubStats";
 import { FutureRoadmap } from "./sections/FutureRoadmap";
+import { VersionHistory } from "./sections/VersionHistory";
 import { Contact } from "./sections/Contact";
 import { Footer } from "./sections/Footer";
 
@@ -92,6 +94,9 @@ export default function App() {
                 {/* Chapter 5: Professional Journey */}
                 <Experience />
 
+                {/* Chapter 5.5: Leadership and Social Impact */}
+                <LeadershipSocialImpact />
+
                 {/* Chapter 6: Certifications Flip Matrix */}
                 <Certifications />
 
@@ -100,6 +105,9 @@ export default function App() {
 
                 {/* Chapter 8: Research Roadmap */}
                 <FutureRoadmap />
+
+                {/* Chapter 8.5: System Changelog */}
+                <VersionHistory />
 
                 {/* Chapter 9: Contact */}
                 <Contact />
