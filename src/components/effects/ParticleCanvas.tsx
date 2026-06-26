@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { usePrefersReduced } from "../../hooks/usePrefersReduced";
 
-export function ParticleCanvas() {
+export function ParticleCanvas({ particleColor = "rgba(56, 189, 248, 0.4)" }: { particleColor?: string }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const prefersReduced = usePrefersReduced();
 
@@ -45,7 +45,7 @@ export function ParticleCanvas() {
       draw(c: CanvasRenderingContext2D) {
         c.beginPath();
         c.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        c.fillStyle = "rgba(56, 189, 248, 0.4)"; // Cyan accent
+        c.fillStyle = particleColor;
         c.fill();
       }
     }

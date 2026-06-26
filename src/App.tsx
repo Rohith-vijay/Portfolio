@@ -20,6 +20,7 @@ import { TrustShowcase } from "./sections/TrustShowcase";
 import { Experience } from "./sections/Experience";
 import { LeadershipSocialImpact } from "./sections/LeadershipSocialImpact";
 import { Certifications } from "./sections/Certifications";
+import { Achievements } from "./sections/Achievements";
 import { GitHubStats } from "./sections/GitHubStats";
 import { FutureRoadmap } from "./sections/FutureRoadmap";
 import { VersionHistory } from "./sections/VersionHistory";
@@ -99,6 +100,9 @@ export default function App() {
 
                 {/* Chapter 6: Certifications Flip Matrix */}
                 <Certifications />
+
+                {/* Chapter 6.5: Milestones & Honors */}
+                <Achievements />
 
                 {/* Chapter 7: GitHub Dashboard */}
                 <GitHubStats />

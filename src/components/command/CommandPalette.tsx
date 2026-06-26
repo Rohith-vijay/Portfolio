@@ -159,7 +159,7 @@ export function CommandPalette({ isOpen, onClose }: CommandPaletteProps) {
       category: "Socials",
       shortcut: "↗",
       type: "social",
-      url: "https://linkedin.com/in/rohith-vijay"
+      url: "https://www.linkedin.com/in/rohithvijayk/"
     }
   ];
 

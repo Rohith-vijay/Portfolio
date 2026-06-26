@@ -5,40 +5,40 @@ import { Terminal, Activity, Brain, Server } from "lucide-react";
 export function CurrentlyBuilding() {
   const tasks = [
     {
-      title: "Production NGO Management Platform",
+      title: "Trust NGO Management Platform",
       category: "Full-Stack Dev",
-      status: "ACTIVE_STREAM",
-      desc: "Refining donation transaction filters and scheduling crons to dispatch receipts securely. Tuning DB connection indexing on PostgreSQL.",
+      status: "ACTIVE_DEVELOPMENT",
+      desc: "Developing features for volunteer tracking, event coordination registries, and secure donation history management.",
       icon: Terminal,
       color: "from-accent-crimson to-accent-orange",
       glow: "rgba(239, 68, 68, 0.15)",
       progress: 90
     },
     {
-      title: "Learning AI & Agentic Systems",
-      category: "Research",
-      status: "STABLE_BUILD",
-      desc: "Investigating agent-to-agent communication layers, LLM orchestration frameworks, and memory persistence mechanisms.",
+      title: "Learning Generative AI & LLMs",
+      category: "AI Research",
+      status: "CURRENTLY_LEARNING",
+      desc: "Studying large language model prompting strategies, API integrations, and vector search concepts.",
       icon: Brain,
       color: "from-accent-orange to-accent-gold",
       glow: "rgba(249, 115, 22, 0.15)",
       progress: 75
     },
     {
-      title: "Building Enterprise Spring Boot Applications",
+      title: "Spring Boot Microservices & REST APIs",
       category: "Backend Dev",
-      status: "ACTIVE_STREAM",
-      desc: "Configuring multi-tenant JWT middleware filters and building transaction rollback test beds to prevent seat allocation overlaps.",
+      status: "ACTIVE_PRACTICE",
+      desc: "Practicing Spring Security configurations, writing REST endpoints, and understanding database transactional locking mechanisms.",
       icon: Server,
       color: "from-accent-gold to-accent-crimson",
       glow: "rgba(234, 179, 8, 0.15)",
       progress: 85
     },
     {
-      title: "Learning Data Structures & Algorithms",
+      title: "Data Structures & Algorithms in Java",
       category: "Problem Solving",
-      status: "DAILY_RUN",
-      desc: "Solving graph Sweep traversal challenges and dynamic programming structures. Practicing index-aligned matrix partitions.",
+      status: "DAILY_DRILL",
+      desc: "Practicing standard algorithm paradigms including sorting, binary searching, graph traversal, and dynamic programming.",
       icon: Activity,
       color: "from-accent-crimson to-accent-gold",
       glow: "rgba(239, 68, 68, 0.15)",

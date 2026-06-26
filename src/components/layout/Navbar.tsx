@@ -126,7 +126,7 @@ export function Navbar({ onSearchClick }: NavbarProps) {
             onClick={(e) => handleNavClick(e, "#contact")}
             className="px-4 py-1.5 rounded-lg bg-gradient-to-r from-accent-crimson to-accent-orange hover:from-accent-orange hover:to-accent-gold text-sm font-semibold shadow-lg hover:shadow-accent-orange/20 transition-all duration-300 interactive-hover"
           >
-            Hire Me
+            Work With Me
           </a>
         </div>
 
@@ -177,7 +177,7 @@ export function Navbar({ onSearchClick }: NavbarProps) {
               onClick={(e) => handleNavClick(e, "#contact")}
               className="mt-2 w-full py-3 rounded-lg bg-gradient-to-r from-accent-crimson to-accent-orange text-center font-bold text-soft-white"
             >
-              Hire Me
+              Work With Me
             </a>
           </nav>
         </div>

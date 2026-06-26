@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { SectionWrapper } from "../components/layout/SectionWrapper";
-import { Star, GitFork, BookOpen, Flame, Code } from "lucide-react";
+import { BookOpen, Flame, Code } from "lucide-react";
 import { Github } from "../components/ui/BrandIcons";
 
 export function GitHubStats() {
@@ -8,27 +8,33 @@ export function GitHubStats() {
   const pinnedRepos = [
     {
       name: "trust-ngo-platform",
-      desc: "Enterprise management panel connecting volunteers and managing secure donation ledgers. Spring Boot microservices backbone.",
+      desc: "Enterprise management panel connecting volunteers and managing secure donation ledgers. Spring Boot microservices backend.",
       lang: "Java",
-      langColor: "#b07219",
-      stars: 48,
-      forks: 12
+      langColor: "#b07219"
     },
     {
-      name: "crediflow-engine",
-      desc: "Real-time personal finance visualizer and credit risk calculation modules. Built using Node.js streams.",
-      lang: "TypeScript",
-      langColor: "#3178c6",
-      stars: 32,
-      forks: 5
+      name: "crediflow",
+      desc: "Real-time personal finance visualizer and credit risk calculation dashboard. Node.js backend streams.",
+      lang: "JavaScript",
+      langColor: "#f1e05a"
     },
     {
-      name: "agentic-orchestrator",
-      desc: "Experimental Python LangChain wrappers coordinating multi-agent feedback streams and memory checkpoints.",
-      lang: "Python",
-      langColor: "#3572A5",
-      stars: 26,
-      forks: 8
+      name: "greenbites",
+      desc: "Eco-conscious food ordering and delivery router calculating carbon offsets with Leaflet API.",
+      lang: "JavaScript",
+      langColor: "#f1e05a"
+    },
+    {
+      name: "smart-clinic",
+      desc: "Digital patient scheduling board and real-time STOMP queue synchronization system.",
+      lang: "Java",
+      langColor: "#b07219"
+    },
+    {
+      name: "railway-reservation",
+      desc: "Seat allocation transaction controller with optimistic and pessimistic locking deadlock mitigation.",
+      lang: "Java",
+      langColor: "#b07219"
     }
   ];
 
@@ -150,17 +156,9 @@ export function GitHubStats() {
                   {repo.name}
                 </a>
                 
-                {/* Icons */}
-                <div className="flex items-center gap-3 text-[10px] font-mono text-white/30">
-                  <span className="flex items-center gap-1">
-                    <Star size={12} className="text-yellow-500/70" />
-                    <span>{repo.stars}</span>
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <GitFork size={12} />
-                    <span>{repo.forks}</span>
-                  </span>
-                </div>
+                <span className="px-2 py-0.5 rounded bg-white/5 border border-white/5 text-[9px] font-mono text-white/40 uppercase tracking-widest">
+                  Repository
+                </span>
               </div>
 
               <p className="text-[11px] leading-relaxed text-muted-gray">

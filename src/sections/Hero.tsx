@@ -11,9 +11,11 @@ export function Hero() {
   // Custom Typewriter Hook logic
   const roles = [
     "Full-Stack Developer",
-    "Computer Science Engineering Student specializing in Generative AI",
-    "Vice President of K V G Shanmukh Sai Trust",
-    "Someone building technology that creates meaningful real-world impact."
+    "Computer Science Engineering Student",
+    "Generative AI Student",
+    "Vice President • K V G Shanmukh Sai Trust",
+    "Backend Engineer",
+    "Software Problem Solver"
   ];
   const [roleIndex, setRoleIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
@@ -109,7 +111,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            Building Scalable Software That Creates Real-World Impact. Specializing in enterprise full-stack design, Spring architectures, and AI agent optimization.
+            Building technology that creates meaningful real-world impact. Specializing in enterprise full-stack design, Spring Boot microservices, and AI agent optimization.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -129,7 +131,7 @@ export function Hero() {
               onClick={() => scrollToSection("contact")}
               className="px-6 py-3 rounded-lg bg-white/5 border border-white/8 hover:bg-white/10 text-sm font-semibold text-soft-white transition-all duration-300 interactive-hover cursor-pointer"
             >
-              Contact Me
+              Work With Me
             </button>
           </motion.div>
 
@@ -150,7 +152,7 @@ export function Hero() {
               <Github size={18} />
             </a>
             <a 
-              href="https://linkedin.com/in/rohith-vijay" 
+              href="https://www.linkedin.com/in/rohithvijayk/" 
               target="_blank" 
               rel="noreferrer"
               className="p-2.5 rounded-lg bg-white/3 border border-white/5 text-muted-gray hover:text-soft-white hover:bg-white/5 transition-all duration-300 interactive-hover"

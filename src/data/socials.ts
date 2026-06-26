@@ -12,7 +12,7 @@ export const socials: SocialLink[] = [
   },
   {
     name: "LinkedIn",
-    url: "https://linkedin.com/in/rohith-vijay", // Default fallback
+    url: "https://www.linkedin.com/in/rohithvijayk/", // Default fallback
     icon: "Linkedin",
   },
   {

@@ -16,12 +16,15 @@ export function About() {
       </div>
 
       {/* Narrative Intro */}
-      <div className="text-left max-w-3xl text-sm leading-relaxed text-muted-gray flex flex-col gap-4">
+      <div className="text-left max-w-3xl text-sm leading-relaxed text-muted-gray flex flex-col gap-4 font-sans">
         <p>
-          I build software that bridges computational theory and real-world utility. My path integrates rigorous academic foundations in computer science engineering, full-stack systems design, and hands-on non-profit leadership.
+          My entry into programming started with curiosity—understanding how simple lines of code could compile into tools that automate tasks. Over time, that curiosity evolved into a deeper interest in software engineering. I realized that writing code isn't just about problem-solving on a screen; it is about building structures and systems that people rely on to get work done.
         </p>
         <p>
-          From optimizing high-concurrency database transactions to deploying custom WebGL graphics and orchestrating Generative AI agents, I treat software engineering as a discipline of continuous verification, modular layouts, and performance metrics.
+          Serving as the Vice President of K V G Shanmukh Sai Trust has been a defining experience. Working on community initiatives and managing operational logistics taught me that technology is only as good as the real-world problems it solves. Designing the digital tools for the trust showed me how digital transformation can remove friction and help organizations focus on their core mission.
+        </p>
+        <p>
+          Currently, my technical focus is on Generative AI and LLM systems. I am fascinated by how artificial intelligence can extend human capabilities when integrated thoughtfully into robust backend architectures. My long-term vision is to continue refining my skills as a full-stack engineer, building reliable, secure, and user-centric software that makes a meaningful, tangible impact on communities.
         </p>
       </div>
 
@@ -46,17 +49,21 @@ export function About() {
 
           <div className="flex flex-col gap-2">
             <span className="text-xs font-mono text-muted-gray uppercase">Degree &amp; Specialization</span>
-            <p className="text-sm font-semibold text-soft-white font-display">B.E. Computer Science Engineering</p>
+            <p className="text-sm font-semibold text-soft-white font-display">B.Tech Computer Science Engineering</p>
             <p className="text-xs text-muted-gray leading-relaxed">
-              K.S. Institute of Technology, Bangalore. Specializing in Generative AI architectures, neural orchestrations, and data structure systems.
+              KL University. Generative AI Specialization. Focus on advanced neural orchestrations, deep learning streams, and scalable systems.
             </p>
+            <div className="flex flex-col gap-1 mt-1 text-[10px] font-mono text-white/50">
+              <div>Current Year: 2026</div>
+              <div>Expected Graduation: 2027</div>
+            </div>
           </div>
 
           <div className="flex flex-col gap-1 border-t border-white/5 pt-4 mt-auto">
             <span className="text-xs font-mono text-muted-gray uppercase">Current Standing</span>
             <div className="flex items-baseline gap-2">
               <span className="text-4xl font-display font-extrabold text-accent-crimson">
-                <AnimatedCounter value={9.21} decimals={2} duration={2} />
+                <AnimatedCounter value={9.55} decimals={2} duration={2} />
               </span>
               <span className="text-xs text-muted-gray font-mono">/ 10.0 CGPA</span>
             </div>

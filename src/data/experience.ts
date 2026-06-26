@@ -11,16 +11,16 @@ export interface JobRole {
 export const experiences: JobRole[] = [
   {
     id: "kvg-trust",
-    title: "Vice President & Technical Lead",
+    title: "Vice President",
     organization: "K V G Shanmukh Sai Trust",
     location: "Karnataka, India",
     period: "2024 - Present",
     bullets: [
-      "Directed the software modernization roadmap, shifting legacy excel-sheet workflows to a secure, unified web portal.",
-      "Mentored a development squad of 10 volunteer engineers on REST API design patterns, Maven dependency management, and Github code review workflows.",
-      "Architected the Trust Platform web application, streamlining donation collection, volunteer schedules, and event audits, reducing operational overhead by 40%.",
-      "Established containerization standards using Docker, resolving local development env mismatch issues across the engineering team."
+      "Serve as Vice President, spearheading technology initiatives and digital website development/maintenance.",
+      "Coordinate volunteers for regional community outreach, educational drives, and non-profit logistics.",
+      "Drive digital transformation, migrating legacy records to secure, organized digital formats.",
+      "Organize non-profit events, manage volunteer tasks, and teach/mentor students on technical subjects."
     ],
-    skillsUsed: ["Spring Boot", "React", "PostgreSQL", "Docker", "Git", "Project Leadership"]
+    skillsUsed: ["React", "Website Maintenance", "Volunteer Coordination", "Digital Transformation", "Event Management", "Community Outreach"]
   }
 ];

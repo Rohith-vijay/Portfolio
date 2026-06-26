@@ -57,7 +57,7 @@ export function Skills() {
                   <div key={skill.name} className="flex flex-col gap-1.5">
                     <div className="flex justify-between items-center text-xs font-semibold">
                       <span className="text-soft-white font-display">{skill.name}</span>
-                      <span className="text-accent-cyan font-mono">{skill.proficiency}%</span>
+                      <span className="text-accent-cyan font-mono text-[10px] tracking-wider uppercase">{skill.level}</span>
                     </div>
                     {/* Proficiency bar */}
                     <div className="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
@@ -81,7 +81,7 @@ export function Skills() {
             <div className="absolute top-0 left-0 w-full h-[2.5px] bg-gradient-to-r from-accent-cyan to-accent-blue" />
             <TechStackCloud />
             <div className="text-center font-mono text-[9px] text-white/20 uppercase tracking-widest mt-2">
-              DRAG ORB TO INTERACT IN 3D
+              DRAG TO ROTATE TECH CLOUD
             </div>
           </div>
         </div>

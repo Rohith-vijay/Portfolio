@@ -50,7 +50,7 @@ function Cloud() {
     const list = [
       "Java", "Spring Boot", "React", "TypeScript", "PostgreSQL",
       "Docker", "AWS", "Node.js", "Python", "SQL",
-      "Git", "Tailwind v4", "Hibernate", "REST APIs", "C++",
+      "Git", "Tailwind v4", "Hibernate", "REST APIs", "C",
       "Security", "Redis", "MongoDB", "Express", "JPA"
     ];
     
@@ -101,7 +101,7 @@ export function TechStackCloud() {
         {[
           "Java", "Spring Boot", "React", "TypeScript", "PostgreSQL",
           "Docker", "AWS", "Node.js", "Python", "SQL",
-          "Git", "Tailwind", "Hibernate", "REST APIs", "C++",
+          "Git", "Tailwind", "Hibernate", "REST APIs", "C",
           "Security", "Redis"
         ].map((tag) => (
           <span key={tag} className="px-3 py-1 rounded bg-white/5 border border-white/10 text-xs text-accent-orange font-mono">

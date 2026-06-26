@@ -62,7 +62,7 @@ export function Contact() {
             </a>
 
             <a 
-              href="https://linkedin.com/in/rohith-vijay" 
+              href="https://www.linkedin.com/in/rohithvijayk/" 
               target="_blank" 
               rel="noreferrer"
               className="flex items-center gap-3.5 text-xs text-muted-gray hover:text-soft-white transition-colors"
@@ -72,7 +72,7 @@ export function Contact() {
               </div>
               <div className="flex flex-col">
                 <span className="font-mono text-[9px] uppercase tracking-wider text-white/30">LinkedIn Network</span>
-                <span className="font-semibold">linkedin.com/in/rohith-vijay</span>
+                <span className="font-semibold">linkedin.com/in/rohithvijayk</span>
               </div>
             </a>
 

@@ -1,38 +1,39 @@
 export interface Achievement {
-  id: string;
-  metric: string;
-  label: string;
+  title: string;
+  year: string;
   description: string;
   tag: string;
 }
 
 export const achievements: Achievement[] = [
   {
-    id: "cgpa",
-    metric: "9.21 CGPA",
-    label: "Academic Excellence",
-    description: "Maintained a top-tier CGPA in Computer Science Engineering, specializing in database modeling and algorithms.",
-    tag: "Education"
+    title: "International Mathematics Olympiad (IMO) Gold Medal",
+    year: "Verified",
+    description: "Awarded Gold Medal in the IMO, demonstrating strong mathematical foundation and problem-solving skills.",
+    tag: "Academic"
   },
   {
-    id: "hackathon",
-    metric: "1st Place",
-    label: "Smart Campus Hackathon 2025",
-    description: "Designed and built an offline-first patient queuing terminal within a 36-hour sprint.",
-    tag: "Competitions"
+    title: "International English Olympiad (IEO) Gold Medal",
+    year: "Verified",
+    description: "Awarded Gold Medal in IEO, showing excellent communication and command over the English language.",
+    tag: "Language"
   },
   {
-    id: "leetcode",
-    metric: "Top 8%",
-    label: "LeetCode Competitive Profile",
-    description: "Solved 400+ problems across arrays, trees, dynamic programming, and graph algorithms.",
-    tag: "Problem Solving"
+    title: "International Science Olympiad (ISO) Country Rank 126",
+    year: "Verified",
+    description: "Secured All-India Country Rank 126 in the ISO, showcasing core analytical concepts and scientific reasoning.",
+    tag: "Academic"
   },
   {
-    id: "open-source",
-    metric: "10+ PRs",
-    label: "Open Source Contributions",
-    description: "Contributed code fixes and documentation expansions to regional developer tool repositories and libraries.",
-    tag: "Community"
+    title: "Non-profit Leadership Contributions",
+    year: "2024 - Present",
+    description: "Serving as Vice President at K V G Shanmukh Sai Trust. Leading regional outreach initiatives, operational digitalization, and volunteer structures.",
+    tag: "Leadership"
+  },
+  {
+    title: "Student Mentoring & Peer Instruction",
+    year: "2024 - Present",
+    description: "Mentoring student developers on REST API design, Git workflow systems, and frontend frameworks.",
+    tag: "Mentorship"
   }
 ];

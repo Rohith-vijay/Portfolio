@@ -72,10 +72,10 @@ export const projects: Project[] = [
       "Implemented strict Spring Security filters, validated JWT payloads at filter chain level, and added CORS configurations."
     ],
     metrics: [
-      { label: "Volunteer Signups", value: "+140%" },
-      { label: "API Gateway Latency", value: "<85ms" },
-      { label: "Security Compliance", value: "100%" },
-      { label: "Transaction Safety", value: "Audit-Pass" }
+      { label: "Security", value: "JWT-Stateless" },
+      { label: "Data Integrity", value: "Transactional" },
+      { label: "Logistics Sync", value: "Real-time" },
+      { label: "Operations", value: "Digitalized" }
     ],
     links: {
       github: "https://github.com/Rohith-vijay/trust-ngo-platform",
@@ -114,9 +114,9 @@ export const projects: Project[] = [
       "Created transactional pipelines utilizing Node.js streams to parallelize dataset mapping before writing to Mongo databases."
     ],
     metrics: [
-      { label: "Computation Time", value: "<15ms" },
-      { label: "Forecasting Precision", value: "94%" },
-      { label: "User Retention", value: "+45%" }
+      { label: "FICO Math", value: "Interactive" },
+      { label: "Visual Charting", value: "Chart.js" },
+      { label: "Storage", value: "MongoDB" }
     ],
     links: {
       github: "https://github.com/Rohith-vijay/crediflow",
@@ -155,9 +155,9 @@ export const projects: Project[] = [
       "Implemented server-side geofencing and caching of regional restaurant datasets to reduce client payloads."
     ],
     metrics: [
-      { label: "Offset Transactions", value: "48%" },
-      { label: "Response Delay", value: "<50ms" },
-      { label: "CO2 Mitigated", value: "1.2 Tons" }
+      { label: "Carbon Model", value: "Leaflet Maps" },
+      { label: "Route Finding", value: "Geospatial" },
+      { label: "Caching", value: "Active" }
     ],
     links: {
       github: "https://github.com/Rohith-vijay/greenbites",
@@ -196,9 +196,9 @@ export const projects: Project[] = [
       "Configured a STOMP message broker on Spring Boot, managing patient queues via concurrent safe list structures in memory."
     ],
     metrics: [
-      { label: "Wait Times Reduced", value: "32%" },
-      { label: "Record Retrieval", value: "<1.2s" },
-      { label: "Security Verification", value: "AES-256" }
+      { label: "Blink Sync", value: "STOMP" },
+      { label: "Data Safety", value: "AES-256" },
+      { label: "Updates Pushed", value: "Real-time" }
     ],
     links: {
       github: "https://github.com/Rohith-vijay/smart-clinic",
@@ -237,9 +237,9 @@ export const projects: Project[] = [
       "Sorted seat selection queries alphabetically by coach number, forcing transactions to lock rows in identical order and resolving circular dependencies."
     ],
     metrics: [
-      { label: "Concurrent Transactions", value: "1,200/sec" },
-      { label: "Booking Overlap Rate", value: "0.0%" },
-      { label: "Deadlock Frequency", value: "0" }
+      { label: "Race Conditions", value: "Mitigated" },
+      { label: "Concurrency", value: "Thread-Safe" },
+      { label: "Locking Mode", value: "Optimistic" }
     ],
     links: {
       github: "https://github.com/Rohith-vijay/railway-reservation",
