@@ -10,10 +10,10 @@ export function Hero() {
   
   // Custom Typewriter Hook logic
   const roles = [
-    "Full Stack Developer",
-    "AI Enthusiast",
-    "Computer Science Student",
-    "Backend Engineer"
+    "Full-Stack Developer",
+    "Computer Science Engineering Student specializing in Generative AI",
+    "Vice President of K V G Shanmukh Sai Trust",
+    "Someone building technology that creates meaningful real-world impact."
   ];
   const [roleIndex, setRoleIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");

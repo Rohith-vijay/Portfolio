@@ -11,7 +11,7 @@ export interface JobRole {
 export const experiences: JobRole[] = [
   {
     id: "kvg-trust",
-    title: "Secretary & Technical Lead",
+    title: "Vice President & Technical Lead",
     organization: "K V G Shanmukh Sai Trust",
     location: "Karnataka, India",
     period: "2024 - Present",

@@ -10,9 +10,19 @@ export function About() {
       <div className="flex flex-col gap-3 text-left">
         <span className="text-xs font-mono uppercase tracking-widest text-accent-orange">01 / CHAPTER</span>
         <h2 className="text-3xl md:text-5xl font-display font-extrabold text-soft-white tracking-tight">
-          Who I Am &amp; What I Focus On
+          My Journey
         </h2>
         <div className="w-16 h-[2px] bg-gradient-to-r from-accent-crimson to-accent-orange mt-1" />
+      </div>
+
+      {/* Narrative Intro */}
+      <div className="text-left max-w-3xl text-sm leading-relaxed text-muted-gray flex flex-col gap-4">
+        <p>
+          I build software that bridges computational theory and real-world utility. My path integrates rigorous academic foundations in computer science engineering, full-stack systems design, and hands-on non-profit leadership.
+        </p>
+        <p>
+          From optimizing high-concurrency database transactions to deploying custom WebGL graphics and orchestrating Generative AI agents, I treat software engineering as a discipline of continuous verification, modular layouts, and performance metrics.
+        </p>
       </div>
 
       {/* Grid Dashboard */}
@@ -35,10 +45,10 @@ export function About() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <span className="text-xs font-mono text-muted-gray uppercase">Degree</span>
+            <span className="text-xs font-mono text-muted-gray uppercase">Degree &amp; Specialization</span>
             <p className="text-sm font-semibold text-soft-white font-display">B.E. Computer Science Engineering</p>
             <p className="text-xs text-muted-gray leading-relaxed">
-              K.S. Institute of Technology, Bangalore.
+              K.S. Institute of Technology, Bangalore. Specializing in Generative AI architectures, neural orchestrations, and data structure systems.
             </p>
           </div>
 
@@ -99,14 +109,14 @@ export function About() {
             <div className="p-2.5 rounded-lg bg-accent-gold/10 text-accent-gold">
               <Award size={20} />
             </div>
-            <h3 className="font-display font-bold text-soft-white text-lg">Leadership Focus</h3>
+            <h3 className="font-display font-bold text-soft-white text-lg">Leadership &amp; Impact</h3>
           </div>
 
           <div className="flex flex-col gap-2">
-            <span className="text-xs font-mono text-muted-gray uppercase">Nonprofit Impact</span>
-            <p className="text-sm font-semibold text-soft-white font-display">Technical Director</p>
+            <span className="text-xs font-mono text-muted-gray uppercase">Nonprofit Focus</span>
+            <p className="text-sm font-semibold text-soft-white font-display">Vice President</p>
             <p className="text-xs text-muted-gray leading-relaxed">
-              Spearheading digitalization workflows at K V G Shanmukh Sai Trust. Setting up clean repositories, code reviews, and container stacks.
+              Spearheading digitalization workflows at K V G Shanmukh Sai Trust. Setting up clean repositories, secure code reviews, and container stacks.
             </p>
           </div>
 
@@ -121,6 +131,48 @@ export function About() {
           </div>
         </motion.div>
 
+      </div>
+
+      {/* Engineering Mindset / Philosophy Section */}
+      <div className="glass-panel p-8 rounded-xl border border-white/5 bg-white/2 relative overflow-hidden mt-6 text-left flex flex-col gap-6">
+        <div className="absolute top-0 left-0 w-full h-[2.5px] bg-gradient-to-r from-accent-crimson via-accent-orange to-accent-gold" />
+        
+        <div className="flex flex-col gap-2">
+          <span className="text-[10px] font-mono text-accent-orange uppercase tracking-wider">ENGINEERING MINDSET</span>
+          <h3 className="text-xl font-bold text-soft-white font-display">Core Philosophies</h3>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs md:text-sm text-muted-gray leading-relaxed">
+          <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-1">
+              <span className="font-semibold text-soft-white font-display">1. Build Software that Solves Real-World Problems</span>
+              <p className="text-xs">Technology exists to serve people and streamline workflows, not just as abstract architecture.</p>
+            </div>
+            <div className="flex flex-col gap-1">
+              <span className="font-semibold text-soft-white font-display">2. Prioritize Maintainable Architecture</span>
+              <p className="text-xs">Stateless interfaces, decoupled configurations, and rigorous typing pay dividends over the lifecycle.</p>
+            </div>
+            <div className="flex flex-col gap-1">
+              <span className="font-semibold text-soft-white font-display">3. Optimize Only After Correctness</span>
+              <p className="text-xs">Verify accuracy first; run transaction analysis and index optimization when constraints dictate.</p>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-1">
+              <span className="font-semibold text-soft-white font-display">4. Value Performance Without Sacrificing Readability</span>
+              <p className="text-xs">Strive for fast loads (95+ Lighthouse scores) but keep components modular and clear.</p>
+            </div>
+            <div className="flex flex-col gap-1">
+              <span className="font-semibold text-soft-white font-display">5. Lead with Integrity &amp; Empathy</span>
+              <p className="text-xs">Empower colleagues with standard environments, clear parameters, and clean code documentation.</p>
+            </div>
+            <div className="flex flex-col gap-1">
+              <span className="font-semibold text-soft-white font-display">6. Continuous Learning</span>
+              <p className="text-xs">Deepen understanding by focusing on core structures and verifying systems in production environments.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </SectionWrapper>
   );
