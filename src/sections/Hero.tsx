@@ -85,7 +85,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             >
-              Hi, I'm <span className="text-gradient-crimson-orange">Rohith Vijay</span>
+              Hi, I'm <span className="text-gradient-crimson-orange">Komma Rohith Vijay</span>
             </motion.h1>
             
             {/* Typewriter role line */}
@@ -141,7 +141,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.5 }}
           >
             <a 
-              href="https://github.com/rohithvijay" 
+              href="https://github.com/Rohith-vijay" 
               target="_blank" 
               rel="noreferrer"
               className="p-2.5 rounded-lg bg-white/3 border border-white/5 text-muted-gray hover:text-soft-white hover:bg-white/5 transition-all duration-300 interactive-hover"

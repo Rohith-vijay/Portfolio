@@ -69,7 +69,7 @@ export function LeadershipSocialImpact() {
               </div>
               
               <a
-                href="https://github.com/rohithvijay"
+                href="https://github.com/Rohith-vijay"
                 target="_blank"
                 rel="noreferrer"
                 className="mt-auto pt-4 border-t border-white/5 flex items-center gap-1 text-[10px] font-mono text-white/40 group-hover:text-accent-orange transition-colors"

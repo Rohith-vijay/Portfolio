@@ -77,7 +77,7 @@ export function Contact() {
             </a>
 
             <a 
-              href="https://github.com/rohithvijay" 
+              href="https://github.com/Rohith-vijay" 
               target="_blank" 
               rel="noreferrer"
               className="flex items-center gap-3.5 text-xs text-muted-gray hover:text-soft-white transition-colors"
@@ -87,7 +87,7 @@ export function Contact() {
               </div>
               <div className="flex flex-col">
                 <span className="font-mono text-[9px] uppercase tracking-wider text-white/30">GitHub Repositories</span>
-                <span className="font-semibold">github.com/rohithvijay</span>
+                <span className="font-semibold">github.com/Rohith-vijay</span>
               </div>
             </a>
           </div>

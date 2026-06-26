@@ -89,10 +89,9 @@ export function About() {
           <div className="flex flex-col gap-1 border-t border-white/5 pt-4 mt-auto">
             <span className="text-xs font-mono text-muted-gray uppercase">Problems Solved</span>
             <div className="flex items-baseline gap-2">
-              <span className="text-4xl font-display font-extrabold text-accent-orange">
-                <AnimatedCounter value={400} decimals={0} duration={1.5} suffix="+" />
+              <span className="text-sm font-display font-bold text-accent-orange uppercase tracking-wider">
+                Coming Soon
               </span>
-              <span className="text-xs text-muted-gray font-mono">Solved Log</span>
             </div>
           </div>
         </motion.div>

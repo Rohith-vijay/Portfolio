@@ -78,7 +78,7 @@ export const projects: Project[] = [
       { label: "Transaction Safety", value: "Audit-Pass" }
     ],
     links: {
-      github: "https://github.com/rohithvijay/trust-ngo-platform",
+      github: "https://github.com/Rohith-vijay/trust-ngo-platform",
       live: "https://trust-ngo.example.com",
       caseStudy: "/projects/trust-platform"
     },
@@ -119,7 +119,7 @@ export const projects: Project[] = [
       { label: "User Retention", value: "+45%" }
     ],
     links: {
-      github: "https://github.com/rohithvijay/crediflow",
+      github: "https://github.com/Rohith-vijay/crediflow",
       live: "https://crediflow.example.com",
       caseStudy: "/projects/crediflow"
     },
@@ -160,7 +160,7 @@ export const projects: Project[] = [
       { label: "CO2 Mitigated", value: "1.2 Tons" }
     ],
     links: {
-      github: "https://github.com/rohithvijay/greenbites",
+      github: "https://github.com/Rohith-vijay/greenbites",
       live: "https://greenbites.example.com",
       caseStudy: "/projects/greenbites"
     },
@@ -201,7 +201,7 @@ export const projects: Project[] = [
       { label: "Security Verification", value: "AES-256" }
     ],
     links: {
-      github: "https://github.com/rohithvijay/smart-clinic",
+      github: "https://github.com/Rohith-vijay/smart-clinic",
       live: "https://smart-clinic.example.com",
       caseStudy: "/projects/smart-clinic"
     },
@@ -242,7 +242,7 @@ export const projects: Project[] = [
       { label: "Deadlock Frequency", value: "0" }
     ],
     links: {
-      github: "https://github.com/rohithvijay/railway-reservation",
+      github: "https://github.com/Rohith-vijay/railway-reservation",
       live: "https://railway-booking.example.com",
       caseStudy: "/projects/railway-reservation"
     },

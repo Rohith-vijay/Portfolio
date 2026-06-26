@@ -7,7 +7,7 @@ export interface SocialLink {
 export const socials: SocialLink[] = [
   {
     name: "GitHub",
-    url: "https://github.com/rohithvijay", // Default fallback or configured name
+    url: "https://github.com/Rohith-vijay", // Default fallback or configured name
     icon: "Github",
   },
   {

@@ -116,12 +116,7 @@ export function CommandPalette({ isOpen, onClose }: CommandPaletteProps) {
   };
 
   const triggerResumeDownload = () => {
-    const link = document.createElement("a");
-    link.href = "/resume.placeholder.pdf";
-    link.download = "Rohith_Vijay_Resume.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    alert("Resume is currently a TODO / Coming Soon. Please contact Komma Rohith Vijay directly via email.");
   };
 
   const handleAction = (item: any) => {
@@ -145,7 +140,7 @@ export function CommandPalette({ isOpen, onClose }: CommandPaletteProps) {
     })),
     {
       id: "resume",
-      title: "Download Resume PDF",
+      title: "Download Resume PDF (TODO / Coming Soon)",
       category: "Actions",
       shortcut: "D R",
       type: "action"
@@ -156,7 +151,7 @@ export function CommandPalette({ isOpen, onClose }: CommandPaletteProps) {
       category: "Socials",
       shortcut: "↗",
       type: "social",
-      url: "https://github.com/rohithvijay"
+      url: "https://github.com/Rohith-vijay"
     },
     {
       id: "linkedin",

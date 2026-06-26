@@ -69,11 +69,11 @@ export function GitHubStats() {
             <div className="grid grid-cols-2 gap-4">
               <div className="flex flex-col gap-0.5">
                 <span className="text-[10px] font-mono text-muted-gray uppercase">Total Contributions</span>
-                <span className="text-2xl font-display font-extrabold text-soft-white">1,240+</span>
+                <span className="text-sm font-display font-bold text-accent-orange uppercase tracking-wider mt-1">Coming Soon</span>
               </div>
               <div className="flex flex-col gap-0.5">
                 <span className="text-[10px] font-mono text-muted-gray uppercase">Commit Streak</span>
-                <span className="text-2xl font-display font-extrabold text-orange-500">42 Days</span>
+                <span className="text-sm font-display font-bold text-accent-orange uppercase tracking-wider mt-1">Coming Soon</span>
               </div>
             </div>
           </div>
@@ -121,7 +121,7 @@ export function GitHubStats() {
               <span>Pinned Repositories</span>
             </div>
             <a
-              href="https://github.com/rohithvijay"
+              href="https://github.com/Rohith-vijay"
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-1 text-[10px] font-mono text-accent-orange hover:text-soft-white transition-colors"
@@ -142,7 +142,7 @@ export function GitHubStats() {
             >
               <div className="flex items-center justify-between">
                 <a
-                  href={`https://github.com/rohithvijay/${repo.name}`}
+                  href={`https://github.com/Rohith-vijay/${repo.name}`}
                   target="_blank"
                   rel="noreferrer"
                   className="text-sm font-bold text-soft-white font-display hover:text-accent-orange transition-colors"
