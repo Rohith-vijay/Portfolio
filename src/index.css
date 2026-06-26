@@ -121,3 +121,67 @@
 .hide-cursor * {
   cursor: none !important;
 }
+
+@keyframes shooting-star {
+  0% {
+    transform: rotate(35deg) translateX(-100%) translateY(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  30% {
+    transform: rotate(35deg) translateX(200%) translateY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(35deg) translateX(200%) translateY(0);
+    opacity: 0;
+  }
+}
+
+.animate-shooting-star {
+  animation: shooting-star 8s linear infinite;
+}
+
+/* Master Design Sunrise: Cinematic name illumination mask */
+@keyframes name-light-reveal {
+  0% {
+    background-position: -200% 0%;
+  }
+  100% {
+    background-position: 200% 0%;
+  }
+}
+
+.text-reveal-ray {
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.1) 20%,
+    var(--color-accent-orange) 45%,
+    #FFF 50%,
+    var(--color-accent-gold) 55%,
+    rgba(255,255,255,0.1) 80%,
+    rgba(255,255,255,0) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: name-light-reveal 3s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* Traveling Light Scroll Guide Ray */
+.scroll-light-ray {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--color-accent-orange), var(--color-accent-gold), transparent);
+  pointer-events: none;
+  z-index: 30;
+  opacity: 0.18;
+  filter: blur(1px);
+}
+
+

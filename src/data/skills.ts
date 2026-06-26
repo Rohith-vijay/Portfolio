@@ -1,7 +1,7 @@
 export interface Skill {
   name: string;
   proficiency: number; // 0 to 100 for visual progress bar width
-  level: "Advanced" | "Proficient" | "Working Knowledge" | "Familiar" | "Currently Learning";
+  level: string;
   icon: string;
 }
 
@@ -19,7 +19,7 @@ export const skillCategories: SkillCategory[] = [
       { name: "Python", proficiency: 80, level: "Proficient", icon: "Terminal" },
       { name: "SQL", proficiency: 80, level: "Proficient", icon: "Database" },
       { name: "JavaScript", proficiency: 85, level: "Proficient", icon: "Code" },
-      { name: "TypeScript", proficiency: 65, level: "Familiar", icon: "Code" },
+      { name: "TypeScript", proficiency: 65, level: "Familiar / Occasional", icon: "Code" },
     ],
   },
   {

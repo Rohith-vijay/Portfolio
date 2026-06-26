@@ -80,9 +80,6 @@ export function Skills() {
           <div className="w-full max-w-sm rounded-2xl glass-panel p-4 relative overflow-hidden shadow-2xl border border-white/5">
             <div className="absolute top-0 left-0 w-full h-[2.5px] bg-gradient-to-r from-accent-cyan to-accent-blue" />
             <TechStackCloud />
-            <div className="text-center font-mono text-[9px] text-white/20 uppercase tracking-widest mt-2">
-              DRAG TO ROTATE TECH CLOUD
-            </div>
           </div>
         </div>
 

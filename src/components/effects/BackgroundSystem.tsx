@@ -222,14 +222,32 @@ export function BackgroundSystem() {
         </div>
       )}
 
+
       {/* Layer 8: Pulsing Star Field & Shooting Stars */}
-      <div className="absolute inset-0 opacity-40">
+      {/* Layer 8: Progressive Pulsing Star Field based on scroll depth */}
+      <div className="absolute inset-0 transition-opacity duration-700" style={{ opacity: 0.2 + scrollProgress * 0.6 }}>
         <div className="absolute top-[12%] left-[18%] w-[1.5px] h-[1.5px] rounded-full bg-white animate-pulse" style={{ animationDuration: '3s' }} />
         <div className="absolute top-[48%] left-[82%] w-[1px] h-[1px] rounded-full bg-white animate-pulse" style={{ animationDuration: '4.5s' }} />
         <div className="absolute top-[72%] left-[28%] w-[1.5px] h-[1.5px] rounded-full bg-white animate-pulse" style={{ animationDuration: '2.5s' }} />
         <div className="absolute top-[28%] left-[72%] w-[2px] h-[2px] rounded-full bg-white animate-pulse" style={{ animationDuration: '5.5s' }} />
         <div className="absolute top-[85%] left-[62%] w-[1.2px] h-[1.2px] rounded-full bg-white animate-pulse" style={{ animationDuration: '3.5s' }} />
         
+        {/* Dynamic stars appearing as journey deepens */}
+        {scrollProgress > 0.2 && (
+          <>
+            <div className="absolute top-[22%] left-[45%] w-[1.5px] h-[1.5px] rounded-full bg-white animate-pulse" style={{ animationDuration: '4s' }} />
+            <div className="absolute top-[60%] left-[15%] w-[1px] h-[1px] rounded-full bg-white animate-pulse" style={{ animationDuration: '3s' }} />
+            <div className="absolute top-[80%] left-[78%] w-[2px] h-[2px] rounded-full bg-white animate-pulse" style={{ animationDuration: '5s' }} />
+          </>
+        )}
+        {scrollProgress > 0.5 && (
+          <>
+            <div className="absolute top-[35%] left-[88%] w-[1px] h-[1px] rounded-full bg-white animate-pulse" style={{ animationDuration: '2.5s' }} />
+            <div className="absolute top-[15%] left-[65%] w-[2px] h-[2px] rounded-full bg-white animate-pulse" style={{ animationDuration: '3.5s' }} />
+            <div className="absolute top-[90%] left-[30%] w-[1.5px] h-[1.5px] rounded-full bg-white animate-pulse" style={{ animationDuration: '4.5s' }} />
+          </>
+        )}
+
         {/* Parallax space dust details */}
         <div 
           className="absolute top-[5%] left-[40%] w-[1.5px] h-[1.5px] rounded-full bg-white opacity-60 transition-transform duration-300"
@@ -244,6 +262,56 @@ export function BackgroundSystem() {
           style={{ transform: `translateY(${scrollProgress * -300}px)` }}
         />
       </div>
+
+      {/* Layer 9: Shooting Stars (Meteor showers triggered dynamically at deep space progress) */}
+      {!prefersReduced && (
+        <div className="absolute inset-0 overflow-hidden pointer-events-none transition-opacity duration-500" style={{ opacity: 0.3 + scrollProgress * 0.7 }}>
+          <div className="absolute top-[10%] left-[30%] w-[120px] h-[1px] bg-gradient-to-r from-accent-orange/80 to-transparent rotate-[35deg] origin-left animate-shooting-star" style={{ animationDelay: '0s' }} />
+          <div className="absolute top-[40%] left-[60%] w-[150px] h-[1px] bg-gradient-to-r from-accent-gold/80 to-transparent rotate-[35deg] origin-left animate-shooting-star" style={{ animationDelay: '4s', animationDuration: '6s' }} />
+          <div className="absolute top-[25%] left-[75%] w-[100px] h-[1px] bg-gradient-to-r from-accent-crimson/60 to-transparent rotate-[35deg] origin-left animate-shooting-star" style={{ animationDelay: '8s', animationDuration: '9s' }} />
+        </div>
+      )}
+
+      {/* Layer 10: Dynamic Discoverable Planetary Silhouettes mapped precisely to scroll milestones */}
+      {!prefersReduced && (
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          {/* Mercury - Visible early in journey */}
+          <div 
+            className="absolute top-[15%] right-[25%] w-16 h-16 rounded-full border border-white/5 bg-gradient-to-tr from-black to-transparent shadow-2xl transition-all duration-1000 ease-out"
+            style={{
+              opacity: scrollProgress > 0.05 && scrollProgress < 0.25 ? (0.25 - Math.abs(scrollProgress - 0.15) * 2.5) : 0,
+              transform: `translateY(${scrollProgress * -60}px) scale(0.8)`,
+              background: `radial-gradient(circle at 70% 30%, rgba(255, 112, 67, 0.2) 0%, rgba(0,0,0,0.95) 75%)`
+            }}
+          />
+          {/* Earth - Visible mid journey */}
+          <div 
+            className="absolute top-[35%] left-[15%] w-24 h-24 rounded-full border border-white/5 bg-gradient-to-tr from-black to-transparent shadow-2xl transition-all duration-1000 ease-out"
+            style={{
+              opacity: scrollProgress > 0.25 && scrollProgress < 0.5 ? (0.3 - Math.abs(scrollProgress - 0.35) * 3.0) : 0,
+              transform: `translateY(${scrollProgress * -40}px)`,
+              background: `radial-gradient(circle at 65% 35%, rgba(56, 189, 248, 0.25) 0%, rgba(0,0,0,0.95) 75%)`
+            }}
+          />
+          {/* Jupiter - Massive planet deep in space */}
+          <div 
+            className="absolute bottom-[20%] right-[8%] w-64 h-64 rounded-full border border-white/5 bg-gradient-to-tr from-black to-transparent shadow-2xl transition-all duration-1000 ease-out"
+            style={{
+              opacity: scrollProgress > 0.5 && scrollProgress < 0.85 ? (0.25 - Math.abs(scrollProgress - 0.7) * 1.5) : 0,
+              transform: `translateY(${scrollProgress * -30}px) scale(1.1)`,
+              background: `radial-gradient(circle at 75% 25%, rgba(234, 179, 8, 0.15) 0%, rgba(0,0,0,0.95) 80%)`
+            }}
+          />
+        </div>
+      )}
+
+      {/* Travelling Light Scroll Guide Ray */}
+      {!prefersReduced && (
+        <div 
+          className="scroll-light-ray" 
+          style={{ top: `${15 + scrollProgress * 70}%` }} 
+        />
+      )}
 
       {/* Dynamic Cosmic HUD Overlays for Space Travel Storytelling */}
       <div className="fixed bottom-6 left-6 z-40 hidden md:flex flex-col gap-1 font-mono text-[10px] tracking-widest text-white/30 hover:text-white/60 transition-colors pointer-events-auto bg-slate-950/20 backdrop-blur-md p-3 rounded-lg border border-white/5 shadow-2xl">
