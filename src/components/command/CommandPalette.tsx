@@ -216,7 +216,7 @@ export function CommandPalette({ isOpen, onClose }: CommandPaletteProps) {
                   )}
                 >
                   <div className="flex items-center gap-3">
-                    <Terminal size={14} className={cn("transition-colors", isSelected ? "text-accent-cyan" : "text-white/20")} />
+                    <Terminal size={14} className={cn("transition-colors", isSelected ? "text-accent-orange" : "text-white/20")} />
                     <span className="text-sm font-medium">{item.title}</span>
                   </div>
                   <div className="flex items-center gap-2">
@@ -224,7 +224,7 @@ export function CommandPalette({ isOpen, onClose }: CommandPaletteProps) {
                       {item.category}
                     </span>
                     {isSelected ? (
-                      <CornerDownLeft size={12} className="text-accent-cyan animate-pulse" />
+                      <CornerDownLeft size={12} className="text-accent-orange animate-pulse" />
                     ) : (
                       <span className="text-[10px] font-mono text-white/30 w-8 text-right">{item.shortcut}</span>
                     )}

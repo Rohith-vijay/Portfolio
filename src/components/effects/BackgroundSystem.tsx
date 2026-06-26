@@ -20,7 +20,7 @@ export function BackgroundSystem() {
   return (
     <div className="fixed inset-0 w-full h-full overflow-hidden select-none pointer-events-none z-0 bg-bg-primary">
       {/* Layer 1: HSL Base Gradient Mesh */}
-      <div className="absolute inset-0 bg-gradient-to-br from-bg-primary via-bg-primary to-[#0a0524] opacity-100" />
+      <div className="absolute inset-0 bg-gradient-to-br from-bg-primary via-bg-primary to-[#0d0d12] opacity-100" />
 
       {/* Layer 2: Glowing Intersections Vector Grid */}
       <div 
@@ -38,9 +38,9 @@ export function BackgroundSystem() {
       {/* Layer 3: Aurora Glowing Auroras */}
       {!prefersReduced && (
         <>
-          <div className="absolute top-[-15%] left-[-10%] w-[60%] h-[60%] rounded-full bg-accent-purple/8 blur-[130px] animate-aurora-slow" />
-          <div className="absolute bottom-[-15%] right-[-10%] w-[65%] h-[65%] rounded-full bg-accent-blue/6 blur-[130px] animate-aurora-slow" style={{ animationDelay: "-5s" }} />
-          <div className="absolute top-[40%] left-[50%] w-[30%] h-[30%] rounded-full bg-accent-cyan/4 blur-[110px] animate-aurora-slow" style={{ animationDelay: "-10s" }} />
+          <div className="absolute top-[-15%] left-[-10%] w-[60%] h-[60%] rounded-full bg-accent-crimson/6 blur-[130px] animate-aurora-slow" />
+          <div className="absolute bottom-[-15%] right-[-10%] w-[65%] h-[65%] rounded-full bg-accent-orange/4 blur-[130px] animate-aurora-slow" style={{ animationDelay: "-5s" }} />
+          <div className="absolute top-[40%] left-[50%] w-[30%] h-[30%] rounded-full bg-accent-gold/2 blur-[110px] animate-aurora-slow" style={{ animationDelay: "-10s" }} />
         </>
       )}
 
@@ -59,7 +59,7 @@ export function BackgroundSystem() {
         <div 
           className="absolute inset-0 mix-blend-screen opacity-100 transition-opacity duration-300"
           style={{
-            background: `radial-gradient(500px circle at ${mousePos.x}px ${mousePos.y}px, rgba(56, 189, 248, 0.05), transparent 80%)`
+            background: `radial-gradient(500px circle at ${mousePos.x}px ${mousePos.y}px, rgba(249, 115, 22, 0.05), transparent 80%)`
           }}
         />
       )}
@@ -67,8 +67,8 @@ export function BackgroundSystem() {
       {/* Layer 7: Floating Soft Blur Blobs */}
       {!prefersReduced && (
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-[20%] right-[15%] w-72 h-72 rounded-full bg-accent-cyan/3 blur-3xl animate-pulse-slow" />
-          <div className="absolute bottom-[30%] left-[10%] w-96 h-96 rounded-full bg-accent-purple/3 blur-3xl animate-pulse-slow" style={{ animationDuration: '6s' }} />
+          <div className="absolute top-[20%] right-[15%] w-72 h-72 rounded-full bg-accent-orange/2 blur-3xl animate-pulse-slow" />
+          <div className="absolute bottom-[30%] left-[10%] w-96 h-96 rounded-full bg-accent-crimson/2 blur-3xl animate-pulse-slow" style={{ animationDuration: '6s' }} />
         </div>
       )}
 

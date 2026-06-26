@@ -8,11 +8,11 @@ export function Experience() {
     <SectionWrapper id="experience-timeline" className="flex flex-col gap-12">
       {/* Section Header */}
       <div className="flex flex-col gap-3 text-left">
-        <span className="text-xs font-mono uppercase tracking-widest text-accent-cyan">06 / CHAPTER</span>
+        <span className="text-xs font-mono uppercase tracking-widest text-accent-orange">06 / CHAPTER</span>
         <h2 className="text-3xl md:text-5xl font-display font-extrabold text-soft-white tracking-tight">
           Professional Journey
         </h2>
-        <div className="w-16 h-[2px] bg-gradient-to-r from-accent-purple to-accent-cyan mt-1" />
+        <div className="w-16 h-[2px] bg-gradient-to-r from-accent-crimson to-accent-orange mt-1" />
       </div>
 
       {/* Timeline Layout */}
@@ -27,7 +27,7 @@ export function Experience() {
             transition={{ duration: 0.6, delay: idx * 0.15 }}
           >
             {/* Timeline node bullet */}
-            <div className="absolute top-0.5 left-[-9px] w-[18px] h-[18px] rounded-full border-4 border-bg-primary bg-accent-cyan shadow-[0_0_8px_rgba(56,189,248,0.5)] z-20" />
+            <div className="absolute top-0.5 left-[-9px] w-[18px] h-[18px] rounded-full border-4 border-bg-primary bg-accent-orange shadow-[0_0_8px_rgba(249,115,22,0.5)] z-20" />
             
             {/* Top header details */}
             <div className="flex flex-col gap-1">
@@ -35,7 +35,7 @@ export function Experience() {
                 <h3 className="text-xl font-bold text-soft-white font-display leading-snug">
                   {exp.title}
                 </h3>
-                <span className="text-[10px] font-mono uppercase tracking-wider text-accent-purple bg-accent-purple/10 border border-accent-purple/20 px-2 py-0.5 rounded-full">
+                <span className="text-[10px] font-mono uppercase tracking-wider text-accent-crimson bg-accent-crimson/10 border border-accent-crimson/20 px-2 py-0.5 rounded-full">
                   LEADERSHIP ROLE
                 </span>
               </div>
@@ -59,7 +59,7 @@ export function Experience() {
             {/* Responsibility points */}
             <ul className="flex flex-col gap-3 mt-2 list-disc pl-4 text-xs md:text-sm text-muted-gray leading-relaxed font-sans">
               {exp.bullets.map((bullet, bIdx) => (
-                <li key={bIdx} className="marker:text-accent-cyan pl-1">
+                <li key={bIdx} className="marker:text-accent-orange pl-1">
                   {bullet}
                 </li>
               ))}

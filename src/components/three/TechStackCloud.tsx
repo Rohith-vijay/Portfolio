@@ -32,12 +32,12 @@ function Word({ children, position }: WordProps) {
       ref={ref}
       position={position}
       {...fontProps}
-      color="#38BDF8"
+      color="#F97316"
       onPointerOver={() => {
-        if (ref.current) ref.current.material.color.set("#7C3AED");
+        if (ref.current) ref.current.material.color.set("#EF4444");
       }}
       onPointerOut={() => {
-        if (ref.current) ref.current.material.color.set("#38BDF8");
+        if (ref.current) ref.current.material.color.set("#F97316");
       }}
     >
       {children}
@@ -104,7 +104,7 @@ export function TechStackCloud() {
           "Git", "Tailwind", "Hibernate", "REST APIs", "C++",
           "Security", "Redis"
         ].map((tag) => (
-          <span key={tag} className="px-3 py-1 rounded bg-white/5 border border-white/10 text-xs text-accent-cyan font-mono">
+          <span key={tag} className="px-3 py-1 rounded bg-white/5 border border-white/10 text-xs text-accent-orange font-mono">
             {tag}
           </span>
         ))}

@@ -68,12 +68,12 @@ export function Hero() {
         <div className="lg:col-span-7 flex flex-col items-start gap-6 text-left">
           {/* Top greeting badge */}
           <motion.div 
-            className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 border border-white/8 backdrop-blur-md text-[11px] font-mono text-accent-cyan tracking-wider shadow-inner"
+            className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 border border-white/8 backdrop-blur-md text-[11px] font-mono text-accent-orange tracking-wider shadow-inner"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
           >
-            <Sparkles size={12} className="text-accent-purple animate-pulse" />
+            <Sparkles size={12} className="text-accent-crimson animate-pulse" />
             <span>AVAILABLE FOR SPRING 2026 ENGAGEMENTS</span>
           </motion.div>
 
@@ -85,7 +85,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             >
-              Hi, I'm <span className="text-gradient-cyan-blue">Rohith Vijay</span>
+              Hi, I'm <span className="text-gradient-crimson-orange">Rohith Vijay</span>
             </motion.h1>
             
             {/* Typewriter role line */}
@@ -96,7 +96,7 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <span>A&nbsp;</span>
-              <span className="text-gradient-purple-cyan border-r-2 border-accent-cyan/80 pr-1 animate-pulse">
+              <span className="text-gradient-orange-gold border-r-2 border-accent-orange/80 pr-1 animate-pulse">
                 {displayText}
               </span>
             </motion.div>
@@ -121,7 +121,7 @@ export function Hero() {
           >
             <button
               onClick={() => scrollToSection("projects")}
-              className="px-6 py-3 rounded-lg bg-gradient-to-r from-accent-purple via-accent-blue to-accent-cyan text-sm font-bold text-soft-white shadow-lg shadow-accent-blue/10 hover:scale-102 hover:shadow-accent-blue/20 transition-all duration-300 interactive-hover cursor-pointer"
+              className="px-6 py-3 rounded-lg bg-gradient-to-r from-accent-crimson via-accent-orange to-accent-gold text-sm font-bold text-soft-white shadow-lg shadow-accent-orange/10 hover:scale-102 hover:shadow-accent-orange/20 transition-all duration-300 interactive-hover cursor-pointer"
             >
               Explore Projects
             </button>

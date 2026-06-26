@@ -73,7 +73,7 @@ export function Loading({ onComplete }: LoadingProps) {
             {/* Logo animation */}
             <div className="flex items-center justify-center gap-3">
               <motion.div 
-                className="w-12 h-12 rounded-xl bg-gradient-to-tr from-accent-purple to-accent-cyan flex items-center justify-center shadow-lg"
+                className="w-12 h-12 rounded-xl bg-gradient-to-tr from-accent-crimson to-accent-orange flex items-center justify-center shadow-lg"
                 initial={{ scale: 0.8, rotate: -45 }}
                 animate={{ scale: 1, rotate: 0 }}
                 transition={{ type: "spring", stiffness: 200, damping: 15 }}
@@ -82,24 +82,24 @@ export function Loading({ onComplete }: LoadingProps) {
               </motion.div>
               <div className="flex flex-col">
                 <span className="text-xl font-display font-bold tracking-widest text-soft-white">ROHITH</span>
-                <span className="text-xs font-mono text-accent-cyan tracking-wider">PORTFOLIO V1.0</span>
+                <span className="text-xs font-mono text-accent-orange tracking-wider">PORTFOLIO V1.0</span>
               </div>
             </div>
 
             {/* Diagnostic console */}
             <div className="glass-panel p-4 rounded-xl border border-white/5 bg-white/2 font-mono text-[11px] text-muted-gray flex flex-col gap-2 shadow-2xl">
               <div className="flex justify-between items-center border-b border-white/5 pb-2 mb-1">
-                <span className="text-accent-cyan">BOOT_SEQUENCE</span>
+                <span className="text-accent-orange">BOOT_SEQUENCE</span>
                 <span className="text-soft-white font-bold">{progress}%</span>
               </div>
               <div className="h-6 flex items-center">
-                <span className="text-accent-purple font-semibold mr-1.5">&gt;</span>
+                <span className="text-accent-crimson font-semibold mr-1.5">&gt;</span>
                 <span className="text-soft-white select-all">{messages[messageIndex]}</span>
               </div>
               {/* Progress bar track */}
               <div className="w-full h-1 bg-white/10 rounded-full overflow-hidden mt-2">
                 <motion.div 
-                  className="h-full bg-gradient-to-r from-accent-purple via-accent-blue to-accent-cyan"
+                  className="h-full bg-gradient-to-r from-accent-crimson via-accent-orange to-accent-gold"
                   style={{ width: `${progress}%` }}
                   transition={{ ease: "easeInOut" }}
                 />

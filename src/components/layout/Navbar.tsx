@@ -69,7 +69,7 @@ export function Navbar({ onSearchClick }: NavbarProps) {
     >
       {/* Top scroll progress track */}
       <div 
-        className="absolute top-0 left-0 h-[2px] bg-gradient-to-r from-accent-purple via-accent-blue to-accent-cyan transition-all duration-75"
+        className="absolute top-0 left-0 h-[2px] bg-gradient-to-r from-accent-crimson via-accent-orange to-accent-gold transition-all duration-75"
         style={{ width: `${scrollProgress}%` }}
       />
 
@@ -80,10 +80,10 @@ export function Navbar({ onSearchClick }: NavbarProps) {
           onClick={(e) => handleNavClick(e, "#welcome")}
           className="flex items-center gap-2 text-soft-white font-display font-bold text-xl tracking-wider select-none group"
         >
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-accent-purple to-accent-cyan flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-accent-crimson to-accent-orange flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
             <Terminal size={16} className="text-soft-white" />
           </div>
-          <span>ROHITH<span className="text-accent-cyan font-light group-hover:text-accent-purple transition-colors duration-300">.VIJAY</span></span>
+          <span>ROHITH<span className="text-accent-orange font-light group-hover:text-accent-crimson transition-colors duration-300">.VIJAY</span></span>
         </a>
 
         {/* Desktop Navigation Links */}
@@ -124,7 +124,7 @@ export function Navbar({ onSearchClick }: NavbarProps) {
           <a
             href="#contact"
             onClick={(e) => handleNavClick(e, "#contact")}
-            className="px-4 py-1.5 rounded-lg bg-gradient-to-r from-accent-purple to-accent-blue hover:from-accent-blue hover:to-accent-cyan text-sm font-semibold shadow-lg hover:shadow-accent-blue/20 transition-all duration-300 interactive-hover"
+            className="px-4 py-1.5 rounded-lg bg-gradient-to-r from-accent-crimson to-accent-orange hover:from-accent-orange hover:to-accent-gold text-sm font-semibold shadow-lg hover:shadow-accent-orange/20 transition-all duration-300 interactive-hover"
           >
             Hire Me
           </a>
@@ -175,7 +175,7 @@ export function Navbar({ onSearchClick }: NavbarProps) {
             <a
               href="#contact"
               onClick={(e) => handleNavClick(e, "#contact")}
-              className="mt-2 w-full py-3 rounded-lg bg-gradient-to-r from-accent-purple to-accent-blue text-center font-bold text-soft-white"
+              className="mt-2 w-full py-3 rounded-lg bg-gradient-to-r from-accent-crimson to-accent-orange text-center font-bold text-soft-white"
             >
               Hire Me
             </a>

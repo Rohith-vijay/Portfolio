@@ -44,11 +44,11 @@ export function GitHubStats() {
     <SectionWrapper id="experience" className="flex flex-col gap-12">
       {/* Section Header */}
       <div className="flex flex-col gap-3 text-left">
-        <span className="text-xs font-mono uppercase tracking-widest text-accent-cyan">05 / CHAPTER</span>
+        <span className="text-xs font-mono uppercase tracking-widest text-accent-orange">05 / CHAPTER</span>
         <h2 className="text-3xl md:text-5xl font-display font-extrabold text-soft-white tracking-tight">
           GitHub Developer Dashboard
         </h2>
-        <div className="w-16 h-[2px] bg-gradient-to-r from-accent-purple to-accent-cyan mt-1" />
+        <div className="w-16 h-[2px] bg-gradient-to-r from-accent-crimson to-accent-orange mt-1" />
       </div>
 
       {/* Grid Dashboard */}
@@ -81,7 +81,7 @@ export function GitHubStats() {
           {/* Card 2: Language splits */}
           <div className="glass-panel p-6 rounded-xl border border-white/5 bg-white/2 flex flex-col gap-4 shadow-lg">
             <div className="flex items-center gap-3">
-              <div className="p-2 rounded-lg bg-accent-cyan/10 text-accent-cyan">
+              <div className="p-2 rounded-lg bg-accent-orange/10 text-accent-orange">
                 <Code size={18} />
               </div>
               <h4 className="font-display font-bold text-soft-white text-sm">Language Distribution</h4>
@@ -124,7 +124,7 @@ export function GitHubStats() {
               href="https://github.com/rohithvijay"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-1 text-[10px] font-mono text-accent-cyan hover:text-soft-white transition-colors"
+              className="flex items-center gap-1 text-[10px] font-mono text-accent-orange hover:text-soft-white transition-colors"
             >
               <span>View All</span>
               <Github size={12} />
@@ -145,7 +145,7 @@ export function GitHubStats() {
                   href={`https://github.com/rohithvijay/${repo.name}`}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-sm font-bold text-soft-white font-display hover:text-accent-cyan transition-colors"
+                  className="text-sm font-bold text-soft-white font-display hover:text-accent-orange transition-colors"
                 >
                   {repo.name}
                 </a>

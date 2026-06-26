@@ -15,11 +15,11 @@ export function Projects({ onProjectSelect, onFlagshipSelect }: ProjectsProps) {
     <SectionWrapper id="projects" className="flex flex-col gap-12">
       {/* Section Header */}
       <div className="flex flex-col gap-3 text-left">
-        <span className="text-xs font-mono uppercase tracking-widest text-accent-cyan">04 / CHAPTER</span>
+        <span className="text-xs font-mono uppercase tracking-widest text-accent-orange">04 / CHAPTER</span>
         <h2 className="text-3xl md:text-5xl font-display font-extrabold text-soft-white tracking-tight">
           Featured Engineering Showcases
         </h2>
-        <div className="w-16 h-[2px] bg-gradient-to-r from-accent-purple to-accent-cyan mt-1" />
+        <div className="w-16 h-[2px] bg-gradient-to-r from-accent-crimson to-accent-orange mt-1" />
       </div>
 
       {/* Projects Display Matrix */}
@@ -29,7 +29,7 @@ export function Projects({ onProjectSelect, onFlagshipSelect }: ProjectsProps) {
         {projects.filter(p => p.id === "trust-platform").map((flagship) => (
           <motion.div
             key={flagship.id}
-            className="lg:col-span-12 glass-panel rounded-2xl overflow-hidden border border-white/8 hover:border-accent-purple/40 shadow-[0_20px_50px_rgba(124,58,237,0.1)] hover:shadow-[0_20px_50px_rgba(124,58,237,0.15)] transition-all duration-500 flex flex-col md:flex-row group"
+            className="lg:col-span-12 glass-panel rounded-2xl overflow-hidden border border-white/8 hover:border-accent-orange/40 shadow-[0_20px_50px_rgba(249,115,22,0.1)] hover:shadow-[0_20px_50px_rgba(249,115,22,0.15)] transition-all duration-500 flex flex-col md:flex-row group"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -48,7 +48,7 @@ export function Projects({ onProjectSelect, onFlagshipSelect }: ProjectsProps) {
             {/* Spec Details right/bottom */}
             <div className="w-full md:w-[45%] p-8 flex flex-col gap-5 text-left justify-center">
               <div className="flex flex-col gap-1.5">
-                <span className="text-[10px] font-mono uppercase tracking-widest text-accent-cyan bg-accent-cyan/10 border border-accent-cyan/20 px-2.5 py-0.5 rounded-full w-max">
+                <span className="text-[10px] font-mono uppercase tracking-widest text-accent-orange bg-accent-orange/10 border border-accent-orange/20 px-2.5 py-0.5 rounded-full w-max">
                   FLAGSHIP PLATFORM DEEP DIVE
                 </span>
                 <h3 className="text-2xl md:text-3xl font-display font-extrabold text-soft-white tracking-tight">
@@ -64,17 +64,17 @@ export function Projects({ onProjectSelect, onFlagshipSelect }: ProjectsProps) {
               {/* Mini tech traits */}
               <div className="flex flex-wrap gap-2 border-y border-white/5 py-4">
                 <div className="flex items-center gap-1 text-[11px] text-soft-white font-display">
-                  <Server size={12} className="text-accent-purple" />
+                  <Server size={12} className="text-accent-crimson" />
                   <span>Spring Boot</span>
                 </div>
                 <span className="text-white/20">•</span>
                 <div className="flex items-center gap-1 text-[11px] text-soft-white font-display">
-                  <Database size={12} className="text-accent-blue" />
+                  <Database size={12} className="text-accent-orange" />
                   <span>PostgreSQL</span>
                 </div>
                 <span className="text-white/20">•</span>
                 <div className="flex items-center gap-1 text-[11px] text-soft-white font-display">
-                  <ShieldCheck size={12} className="text-accent-cyan" />
+                  <ShieldCheck size={12} className="text-accent-gold" />
                   <span>JWT Tokens</span>
                 </div>
               </div>
@@ -83,7 +83,7 @@ export function Projects({ onProjectSelect, onFlagshipSelect }: ProjectsProps) {
               <div className="flex items-center justify-between mt-2">
                 <button
                   onClick={onFlagshipSelect}
-                  className="flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-gradient-to-r from-accent-purple to-accent-blue text-xs font-bold text-soft-white shadow-lg hover:shadow-accent-blue/15 hover:scale-102 transition-all duration-300 cursor-pointer"
+                  className="flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-gradient-to-r from-accent-crimson to-accent-orange text-xs font-bold text-soft-white shadow-lg hover:shadow-accent-orange/15 hover:scale-102 transition-all duration-300 cursor-pointer"
                 >
                   <span>Read Case Study</span>
                   <ArrowRight size={14} />
@@ -138,8 +138,8 @@ export function Projects({ onProjectSelect, onFlagshipSelect }: ProjectsProps) {
             {/* Meta details bottom */}
             <div className="p-6 flex flex-col gap-4 text-left flex-grow">
               <div className="flex flex-col gap-1">
-                <span className="text-[9px] font-mono text-accent-cyan uppercase tracking-wider">{proj.tagline}</span>
-                <h4 className="text-lg font-bold text-soft-white font-display leading-tight group-hover:text-accent-cyan transition-colors">
+                <span className="text-[9px] font-mono text-accent-orange uppercase tracking-wider">{proj.tagline}</span>
+                <h4 className="text-lg font-bold text-soft-white font-display leading-tight group-hover:text-accent-orange transition-colors">
                   {proj.title}
                 </h4>
               </div>
@@ -150,7 +150,7 @@ export function Projects({ onProjectSelect, onFlagshipSelect }: ProjectsProps) {
 
               {/* Action buttons footer */}
               <div className="flex items-center justify-between mt-auto pt-4 border-t border-white/5 text-xs text-soft-white font-semibold">
-                <span className="text-accent-blue group-hover:text-accent-cyan transition-colors flex items-center gap-1">
+                <span className="text-accent-orange group-hover:text-accent-gold transition-colors flex items-center gap-1">
                   <span>View Details</span>
                   <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
                 </span>

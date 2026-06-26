@@ -6,11 +6,11 @@
   --font-display: "Space Grotesk", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 
-  --color-bg-primary: #050816;
-  --color-bg-secondary: #0F172A;
-  --color-accent-blue: #3B82F6;
-  --color-accent-cyan: #38BDF8;
-  --color-accent-purple: #7C3AED;
+  --color-bg-primary: #0a0a0c;
+  --color-bg-secondary: #16161c;
+  --color-accent-crimson: #EF4444;
+  --color-accent-orange: #F97316;
+  --color-accent-gold: #EAB308;
   --color-soft-white: #F8FAFC;
   --color-muted-gray: #94A3B8;
 
@@ -43,7 +43,7 @@
   }
 
   ::selection {
-    background-color: rgba(124, 58, 237, 0.3);
+    background-color: rgba(249, 115, 22, 0.3);
     color: var(--color-soft-white);
   }
 
@@ -52,39 +52,39 @@
     width: 6px;
   }
   ::-webkit-scrollbar-track {
-    background: #050816;
+    background: #0a0a0c;
   }
   ::-webkit-scrollbar-thumb {
-    background: #1E293B;
+    background: #27272a;
     border-radius: 9999px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #334155;
+    background: #3f3f46;
   }
 }
 
 /* Custom premium styles and utility classes */
 .glass-panel {
-  background: rgba(15, 23, 42, 0.45);
+  background: rgba(22, 22, 28, 0.45);
   backdrop-filter: blur(16px) saturate(120%);
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
 }
 
-.text-gradient-blue-purple {
-  background: linear-gradient(135deg, #3B82F6 0%, #7C3AED 100%);
+.text-gradient-crimson-orange {
+  background: linear-gradient(135deg, #EF4444 0%, #F97316 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.text-gradient-cyan-blue {
-  background: linear-gradient(135deg, #38BDF8 0%, #3B82F6 100%);
+.text-gradient-orange-gold {
+  background: linear-gradient(135deg, #F97316 0%, #EAB308 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.text-gradient-purple-cyan {
-  background: linear-gradient(135deg, #7C3AED 0%, #38BDF8 100%);
+.text-gradient-gold-crimson {
+  background: linear-gradient(135deg, #EAB308 0%, #EF4444 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -93,8 +93,8 @@
   transition: all 0.3s ease;
 }
 .border-glow-hover:hover {
-  border-color: rgba(59, 130, 246, 0.4);
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
+  border-color: rgba(249, 115, 22, 0.4);
+  box-shadow: 0 0 20px rgba(249, 115, 22, 0.15);
 }
 
 /* Aurora background anim definition */

@@ -21,10 +21,10 @@ function CertCard({ cert }: { cert: Certification }) {
         
         {/* CARD FRONT LAYER */}
         <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] glass-panel p-6 rounded-xl border border-white/5 bg-white/2 flex flex-col gap-4 text-left shadow-lg overflow-hidden border-glow-hover">
-          <div className="absolute top-0 left-0 w-full h-[2.5px] bg-gradient-to-r from-accent-purple to-accent-blue" />
+          <div className="absolute top-0 left-0 w-full h-[2.5px] bg-gradient-to-r from-accent-crimson to-accent-orange" />
           
           <div className="flex items-start justify-between">
-            <div className="p-2 rounded-lg bg-accent-purple/10 text-accent-purple">
+            <div className="p-2 rounded-lg bg-accent-crimson/10 text-accent-crimson">
               <Award size={18} />
             </div>
             
@@ -32,7 +32,7 @@ function CertCard({ cert }: { cert: Certification }) {
           </div>
 
           <div className="flex flex-col gap-1.5 mt-1">
-            <span className="text-[9px] font-mono text-accent-cyan uppercase tracking-wider">{cert.issuer}</span>
+            <span className="text-[9px] font-mono text-accent-orange uppercase tracking-wider">{cert.issuer}</span>
             <h4 className="text-sm font-bold text-soft-white font-display leading-snug line-clamp-2">
               {cert.name}
             </h4>
@@ -77,7 +77,7 @@ function CertCard({ cert }: { cert: Certification }) {
             className="flex items-center justify-center gap-1.5 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 text-[11px] font-semibold text-soft-white mt-auto transition-colors cursor-pointer select-none"
           >
             <span>Verify Credential</span>
-            <ExternalLink size={10} className="text-accent-cyan" />
+            <ExternalLink size={10} className="text-accent-orange" />
           </a>
         </div>
 
@@ -91,11 +91,11 @@ export function Certifications() {
     <SectionWrapper id="certifications" className="flex flex-col gap-12">
       {/* Section Header */}
       <div className="flex flex-col gap-3 text-left">
-        <span className="text-xs font-mono uppercase tracking-widest text-accent-cyan">07 / CHAPTER</span>
+        <span className="text-xs font-mono uppercase tracking-widest text-accent-orange">07 / CHAPTER</span>
         <h2 className="text-3xl md:text-5xl font-display font-extrabold text-soft-white tracking-tight">
           Credential Registry
         </h2>
-        <div className="w-16 h-[2px] bg-gradient-to-r from-accent-purple to-accent-cyan mt-1" />
+        <div className="w-16 h-[2px] bg-gradient-to-r from-accent-crimson to-accent-orange mt-1" />
       </div>
 
       {/* Grid Display */}

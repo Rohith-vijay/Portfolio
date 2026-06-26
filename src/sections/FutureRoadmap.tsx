@@ -8,11 +8,11 @@ export function FutureRoadmap() {
     <SectionWrapper id="roadmap" className="flex flex-col gap-12">
       {/* Section Header */}
       <div className="flex flex-col gap-3 text-left">
-        <span className="text-xs font-mono uppercase tracking-widest text-accent-cyan">08 / CHAPTER</span>
+        <span className="text-xs font-mono uppercase tracking-widest text-accent-orange">08 / CHAPTER</span>
         <h2 className="text-3xl md:text-5xl font-display font-extrabold text-soft-white tracking-tight">
           Research Roadmap &amp; Goals
         </h2>
-        <div className="w-16 h-[2px] bg-gradient-to-r from-accent-purple to-accent-cyan mt-1" />
+        <div className="w-16 h-[2px] bg-gradient-to-r from-accent-crimson to-accent-orange mt-1" />
       </div>
 
       {/* Roadmap List */}
@@ -28,7 +28,7 @@ export function FutureRoadmap() {
           >
             {/* Left status vertical border indicator */}
             <div className={`absolute top-0 left-0 w-1.5 h-full ${
-              milestone.status === "active" ? "bg-accent-cyan" : "bg-white/10"
+              milestone.status === "active" ? "bg-accent-orange" : "bg-white/10"
             }`} />
 
             {/* Header info */}
@@ -39,7 +39,7 @@ export function FutureRoadmap() {
               </div>
               <span className={`text-[9px] font-mono uppercase tracking-widest px-2 py-0.5 rounded ${
                 milestone.status === "active" 
-                  ? "bg-accent-cyan/15 border border-accent-cyan/35 text-accent-cyan" 
+                  ? "bg-accent-orange/15 border border-accent-orange/35 text-accent-orange" 
                   : "bg-white/5 border border-white/5 text-white/30"
               }`}>
                 {milestone.status}
@@ -48,7 +48,7 @@ export function FutureRoadmap() {
 
             {/* Target name */}
             <div className="flex items-center gap-2 mt-1">
-              <Target size={14} className={milestone.status === "active" ? "text-accent-cyan" : "text-white/20"} />
+              <Target size={14} className={milestone.status === "active" ? "text-accent-orange" : "text-white/20"} />
               <h4 className="text-base font-bold text-soft-white font-display">
                 {milestone.goal}
               </h4>

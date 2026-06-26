@@ -25,7 +25,7 @@ export function TrustShowcase({ onBack }: TrustShowcaseProps) {
         {/* Back navigation */}
         <button
           onClick={onBack}
-          className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-accent-cyan hover:text-soft-white transition-colors cursor-pointer select-none"
+          className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-accent-orange hover:text-soft-white transition-colors cursor-pointer select-none"
         >
           <ArrowLeft size={14} />
           <span>Back to Portfolio</span>
@@ -34,7 +34,7 @@ export function TrustShowcase({ onBack }: TrustShowcaseProps) {
         {/* Section Header */}
         <div className="flex flex-col gap-4">
           <div className="flex flex-wrap items-center gap-2.5">
-            <span className="text-[10px] font-mono uppercase tracking-widest text-accent-cyan bg-accent-cyan/10 border border-accent-cyan/20 px-3 py-0.5 rounded-full">
+            <span className="text-[10px] font-mono uppercase tracking-widest text-accent-orange bg-accent-orange/10 border border-accent-orange/20 px-3 py-0.5 rounded-full">
               FLAGSHIP ENGINEERING SPEC
             </span>
             <span className="text-white/20">•</span>
@@ -62,7 +62,7 @@ export function TrustShowcase({ onBack }: TrustShowcaseProps) {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {project.metrics.map((met) => (
             <div key={met.label} className="glass-panel p-6 rounded-xl text-center flex flex-col gap-1.5 border border-white/5 bg-white/2 shadow-lg">
-              <span className="text-2xl md:text-3xl font-display font-extrabold text-accent-cyan">{met.value}</span>
+              <span className="text-2xl md:text-3xl font-display font-extrabold text-accent-orange">{met.value}</span>
               <span className="text-[9px] font-mono text-muted-gray uppercase tracking-wider">{met.label}</span>
             </div>
           ))}
@@ -95,24 +95,24 @@ export function TrustShowcase({ onBack }: TrustShowcaseProps) {
                 <div className="w-full flex flex-col md:flex-row items-center justify-between gap-4 md:gap-2">
                   
                   {/* Client */}
-                  <div className="px-4 py-2.5 rounded-lg border border-accent-cyan/20 bg-accent-cyan/5 text-center flex flex-col gap-1 w-32 shadow-md">
-                    <span className="text-[10px] font-mono text-accent-cyan">CLIENT LAYER</span>
+                  <div className="px-4 py-2.5 rounded-lg border border-accent-crimson/20 bg-accent-crimson/5 text-center flex flex-col gap-1 w-32 shadow-md">
+                    <span className="text-[10px] font-mono text-accent-crimson">CLIENT LAYER</span>
                     <span className="text-xs font-semibold font-display">React + Vite</span>
                   </div>
 
                   <div className="h-4 w-[1px] md:h-[1px] md:w-8 bg-white/20" />
 
                   {/* Gateway */}
-                  <div className="px-4 py-2.5 rounded-lg border border-accent-purple/20 bg-accent-purple/5 text-center flex flex-col gap-1 w-32 shadow-md">
-                    <span className="text-[10px] font-mono text-accent-purple">GATEWAY / JWT</span>
+                  <div className="px-4 py-2.5 rounded-lg border border-accent-orange/20 bg-accent-orange/5 text-center flex flex-col gap-1 w-32 shadow-md">
+                    <span className="text-[10px] font-mono text-accent-orange">GATEWAY / JWT</span>
                     <span className="text-xs font-semibold font-display">Security Filters</span>
                   </div>
 
                   <div className="h-4 w-[1px] md:h-[1px] md:w-8 bg-white/20" />
 
                   {/* REST Services */}
-                  <div className="px-4 py-2.5 rounded-lg border border-accent-blue/20 bg-accent-blue/5 text-center flex flex-col gap-1 w-32 shadow-md">
-                    <span className="text-[10px] font-mono text-accent-blue">API BACKBONE</span>
+                  <div className="px-4 py-2.5 rounded-lg border border-accent-gold/20 bg-accent-gold/5 text-center flex flex-col gap-1 w-32 shadow-md">
+                    <span className="text-[10px] font-mono text-accent-gold">API BACKBONE</span>
                     <span className="text-xs font-semibold font-display">Spring Boot</span>
                   </div>
 
@@ -146,17 +146,17 @@ export function TrustShowcase({ onBack }: TrustShowcaseProps) {
                 <div>spring:</div>
                 <div className="pl-4">datasource:</div>
                 <div className="pl-8">hikari:</div>
-                <div className="pl-12 text-accent-cyan">maximum-pool-size: 25</div>
-                <div className="pl-12 text-accent-cyan">minimum-idle: 8</div>
-                <div className="pl-12 text-accent-cyan">connection-timeout: 20000 # 20s max queue wait</div>
-                <div className="pl-12 text-accent-cyan">idle-timeout: 300000 # 5 min</div>
+                <div className="pl-12 text-accent-orange">maximum-pool-size: 25</div>
+                <div className="pl-12 text-accent-orange">minimum-idle: 8</div>
+                <div className="pl-12 text-accent-orange">connection-timeout: 20000 # 20s max queue wait</div>
+                <div className="pl-12 text-accent-orange">idle-timeout: 300000 # 5 min</div>
               </div>
 
               <p className="text-sm leading-relaxed text-muted-gray font-sans mt-2">
                 Additionally, database indexing patterns were optimized. Composite indexes were mapped to speed up volunteer event searches, reducing queries from linear sweeps to direct scans:
               </p>
 
-              <div className="p-4 rounded-xl bg-slate-950/90 border border-white/5 font-mono text-[11px] text-accent-cyan flex flex-col gap-1 shadow-inner">
+              <div className="p-4 rounded-xl bg-slate-950/90 border border-white/5 font-mono text-[11px] text-accent-orange flex flex-col gap-1 shadow-inner">
                 <div>CREATE INDEX idx_volunteer_event ON t_volunteer_registry (event_id, volunteer_id);</div>
                 <div>CREATE INDEX idx_donation_date ON t_donation_ledger (donation_date DESC);</div>
               </div>
@@ -168,7 +168,7 @@ export function TrustShowcase({ onBack }: TrustShowcaseProps) {
             
             {/* Tech details */}
             <div className="glass-panel p-6 rounded-xl flex flex-col gap-4 border border-white/5">
-              <h4 className="text-xs font-mono uppercase tracking-wider text-accent-cyan border-b border-white/5 pb-2">
+              <h4 className="text-xs font-mono uppercase tracking-wider text-accent-orange border-b border-white/5 pb-2">
                 System Specs
               </h4>
               <div className="flex flex-col gap-3 text-xs">
@@ -193,7 +193,7 @@ export function TrustShowcase({ onBack }: TrustShowcaseProps) {
 
             {/* API Endpoints Terminal Mock */}
             <div className="glass-panel p-6 rounded-xl flex flex-col gap-4 border border-white/5">
-              <h4 className="text-xs font-mono uppercase tracking-wider text-accent-cyan border-b border-white/5 pb-2">
+              <h4 className="text-xs font-mono uppercase tracking-wider text-accent-orange border-b border-white/5 pb-2">
                 REST Gateways
               </h4>
               <div className="flex flex-col gap-3 font-mono text-[10px]">
@@ -231,7 +231,7 @@ export function TrustShowcase({ onBack }: TrustShowcaseProps) {
                 href={project.links.live}
                 target="_blank"
                 rel="noreferrer"
-                className="w-full flex items-center justify-center gap-2 py-3 rounded-lg bg-gradient-to-r from-accent-purple to-accent-blue text-xs font-semibold text-soft-white transition-colors cursor-pointer select-none shadow-lg"
+                className="w-full flex items-center justify-center gap-2 py-3 rounded-lg bg-gradient-to-r from-accent-crimson to-accent-orange text-xs font-semibold text-soft-white transition-colors cursor-pointer select-none shadow-lg"
               >
                 <ExternalLink size={14} />
                 <span>Launch Live Application</span>

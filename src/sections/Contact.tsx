@@ -28,11 +28,11 @@ export function Contact() {
     <SectionWrapper id="contact" className="flex flex-col gap-12">
       {/* Section Header */}
       <div className="flex flex-col gap-3 text-left">
-        <span className="text-xs font-mono uppercase tracking-widest text-accent-cyan">09 / CHAPTER</span>
+        <span className="text-xs font-mono uppercase tracking-widest text-accent-orange">09 / CHAPTER</span>
         <h2 className="text-3xl md:text-5xl font-display font-extrabold text-soft-white tracking-tight">
           Let's Build Together
         </h2>
-        <div className="w-16 h-[2px] bg-gradient-to-r from-accent-purple to-accent-cyan mt-1" />
+        <div className="w-16 h-[2px] bg-gradient-to-r from-accent-crimson to-accent-orange mt-1" />
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start relative z-10 text-left">
@@ -52,7 +52,7 @@ export function Contact() {
               href="mailto:rohithvijay.cse@gmail.com" 
               className="flex items-center gap-3.5 text-xs text-muted-gray hover:text-soft-white transition-colors"
             >
-              <div className="p-2.5 rounded-lg bg-white/3 border border-white/5 text-accent-purple">
+              <div className="p-2.5 rounded-lg bg-white/3 border border-white/5 text-accent-crimson">
                 <Mail size={16} />
               </div>
               <div className="flex flex-col">
@@ -67,7 +67,7 @@ export function Contact() {
               rel="noreferrer"
               className="flex items-center gap-3.5 text-xs text-muted-gray hover:text-soft-white transition-colors"
             >
-              <div className="p-2.5 rounded-lg bg-white/3 border border-white/5 text-accent-blue">
+              <div className="p-2.5 rounded-lg bg-white/3 border border-white/5 text-accent-orange">
                 <Linkedin size={16} />
               </div>
               <div className="flex flex-col">
@@ -82,7 +82,7 @@ export function Contact() {
               rel="noreferrer"
               className="flex items-center gap-3.5 text-xs text-muted-gray hover:text-soft-white transition-colors"
             >
-              <div className="p-2.5 rounded-lg bg-white/3 border border-white/5 text-accent-cyan">
+              <div className="p-2.5 rounded-lg bg-white/3 border border-white/5 text-accent-gold">
                 <Github size={16} />
               </div>
               <div className="flex flex-col">
@@ -123,7 +123,7 @@ export function Contact() {
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
                 placeholder="e.g. John Doe"
                 disabled={status === "submitting"}
-                className="w-full px-4 py-3 rounded-lg bg-white/3 border border-white/5 hover:border-white/10 focus:border-accent-cyan outline-none text-xs text-soft-white transition-all font-sans"
+                className="w-full px-4 py-3 rounded-lg bg-white/3 border border-white/5 hover:border-white/10 focus:border-accent-orange outline-none text-xs text-soft-white transition-all font-sans"
               />
             </div>
 
@@ -136,7 +136,7 @@ export function Contact() {
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
                 placeholder="e.g. john@company.com"
                 disabled={status === "submitting"}
-                className="w-full px-4 py-3 rounded-lg bg-white/3 border border-white/5 hover:border-white/10 focus:border-accent-cyan outline-none text-xs text-soft-white transition-all font-sans"
+                className="w-full px-4 py-3 rounded-lg bg-white/3 border border-white/5 hover:border-white/10 focus:border-accent-orange outline-none text-xs text-soft-white transition-all font-sans"
               />
             </div>
 
@@ -149,7 +149,7 @@ export function Contact() {
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
                 placeholder="Briefly detail your proposal..."
                 disabled={status === "submitting"}
-                className="w-full px-4 py-3 rounded-lg bg-white/3 border border-white/5 hover:border-white/10 focus:border-accent-cyan outline-none text-xs text-soft-white transition-all font-sans resize-none"
+                className="w-full px-4 py-3 rounded-lg bg-white/3 border border-white/5 hover:border-white/10 focus:border-accent-orange outline-none text-xs text-soft-white transition-all font-sans resize-none"
               />
             </div>
 
@@ -157,7 +157,7 @@ export function Contact() {
             <button
               type="submit"
               disabled={status === "submitting" || !form.name || !form.email || !form.message}
-              className="w-full flex items-center justify-center gap-2 py-3.5 rounded-lg bg-gradient-to-r from-accent-purple to-accent-blue disabled:from-white/10 disabled:to-white/10 disabled:text-white/20 disabled:cursor-not-allowed text-xs font-bold text-soft-white mt-2 transition-all duration-300 cursor-pointer shadow-lg select-none"
+              className="w-full flex items-center justify-center gap-2 py-3.5 rounded-lg bg-gradient-to-r from-accent-crimson to-accent-orange disabled:from-white/10 disabled:to-white/10 disabled:text-white/20 disabled:cursor-not-allowed text-xs font-bold text-soft-white mt-2 transition-all duration-300 cursor-pointer shadow-lg select-none"
             >
               {status === "submitting" ? (
                 <span className="w-4 h-4 rounded-full border-2 border-white/30 border-t-white animate-spin" />

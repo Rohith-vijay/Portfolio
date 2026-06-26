@@ -10,8 +10,8 @@ export function CurrentlyBuilding() {
       status: "ACTIVE_STREAM",
       desc: "Refining donation transaction filters and scheduling crons to dispatch receipts securely. Tuning DB connection indexing on PostgreSQL.",
       icon: Terminal,
-      color: "from-accent-purple to-pink-500",
-      glow: "rgba(124, 58, 237, 0.15)",
+      color: "from-accent-crimson to-accent-orange",
+      glow: "rgba(239, 68, 68, 0.15)",
       progress: 90
     },
     {
@@ -20,8 +20,8 @@ export function CurrentlyBuilding() {
       status: "STABLE_BUILD",
       desc: "Investigating agent-to-agent communication layers, LLM orchestration frameworks, and memory persistence mechanisms.",
       icon: Brain,
-      color: "from-accent-cyan to-accent-blue",
-      glow: "rgba(56, 189, 248, 0.15)",
+      color: "from-accent-orange to-accent-gold",
+      glow: "rgba(249, 115, 22, 0.15)",
       progress: 75
     },
     {
@@ -30,8 +30,8 @@ export function CurrentlyBuilding() {
       status: "ACTIVE_STREAM",
       desc: "Configuring multi-tenant JWT middleware filters and building transaction rollback test beds to prevent seat allocation overlaps.",
       icon: Server,
-      color: "from-accent-blue to-accent-purple",
-      glow: "rgba(59, 130, 246, 0.15)",
+      color: "from-accent-gold to-accent-crimson",
+      glow: "rgba(234, 179, 8, 0.15)",
       progress: 85
     },
     {
@@ -40,8 +40,8 @@ export function CurrentlyBuilding() {
       status: "DAILY_RUN",
       desc: "Solving graph Sweep traversal challenges and dynamic programming structures. Practicing index-aligned matrix partitions.",
       icon: Activity,
-      color: "from-accent-cyan to-teal-500",
-      glow: "rgba(56, 189, 248, 0.15)",
+      color: "from-accent-crimson to-accent-gold",
+      glow: "rgba(239, 68, 68, 0.15)",
       progress: 80
     }
   ];
@@ -50,7 +50,7 @@ export function CurrentlyBuilding() {
     <SectionWrapper id="now-building" className="flex flex-col gap-12">
       {/* Section Header */}
       <div className="flex flex-col gap-3 text-left">
-        <span className="text-xs font-mono uppercase tracking-widest text-accent-cyan">02 / CHAPTER</span>
+        <span className="text-xs font-mono uppercase tracking-widest text-accent-orange">02 / CHAPTER</span>
         <div className="flex items-center gap-2">
           <h2 className="text-3xl md:text-5xl font-display font-extrabold text-soft-white tracking-tight">
             Currently Building
@@ -61,7 +61,7 @@ export function CurrentlyBuilding() {
             className="w-2.5 h-2.5 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.6)]"
           />
         </div>
-        <div className="w-16 h-[2px] bg-gradient-to-r from-accent-purple to-accent-cyan mt-1" />
+        <div className="w-16 h-[2px] bg-gradient-to-r from-accent-crimson to-accent-orange mt-1" />
       </div>
 
       {/* Grid wrapper */}
@@ -101,7 +101,7 @@ export function CurrentlyBuilding() {
 
               {/* Main text */}
               <div className="flex flex-col gap-2">
-                <h3 className="text-base font-bold text-soft-white font-display leading-snug group-hover:text-accent-cyan transition-colors">
+                <h3 className="text-base font-bold text-soft-white font-display leading-snug group-hover:text-accent-orange transition-colors">
                   {task.title}
                 </h3>
                 <p className="text-xs text-muted-gray leading-relaxed font-sans">
