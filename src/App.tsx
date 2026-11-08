@@ -1,136 +1,112 @@
-import { useState } from "react";
-import { AnimatePresence } from "framer-motion";
-import { useLenis } from "./hooks/useLenis";
+import { Component, lazy, Suspense, useEffect, type ReactNode } from 'react'
+import { sections, type SectionId } from './data/content'
+import { initScroll } from './lib/scroll'
+import { motion, useUI } from './lib/store'
+import { Cursor, Loader, Nav, Rail } from './components/Chrome'
+import { About, Achievements, Contact, DeskPanel, Experience, Hero, Inspirations, Interests, Projects, Skills, Workspace } from './sections/Sections'
 
-// Components
-import { CustomCursor } from "./components/cursor/CustomCursor";
-import { BackgroundSystem } from "./components/effects/BackgroundSystem";
-import { Navbar } from "./components/layout/Navbar";
-import { CommandPalette } from "./components/command/CommandPalette";
-import { ProjectModal } from "./components/ui/ProjectModal";
+const Scene = lazy(() => import('./three/Experience'))
 
-// Sections
-import { Loading } from "./sections/Loading";
-import { Hero } from "./sections/Hero";
-import { About } from "./sections/About";
-import { CurrentlyBuilding } from "./sections/CurrentlyBuilding";
-import { Skills } from "./sections/Skills";
-import { Projects } from "./sections/Projects";
-import { TrustShowcase } from "./sections/TrustShowcase";
-import { Experience } from "./sections/Experience";
-import { LeadershipSocialImpact } from "./sections/LeadershipSocialImpact";
-import { Certifications } from "./sections/Certifications";
-import { Achievements } from "./sections/Achievements";
-import { GitHubStats } from "./sections/GitHubStats";
-import { FutureRoadmap } from "./sections/FutureRoadmap";
-import { VersionHistory } from "./sections/VersionHistory";
-import { Contact } from "./sections/Contact";
-import { Footer } from "./sections/Footer";
+/** If WebGL is unavailable the site still works, on an animated CSS backdrop. */
+class WebGLBoundary extends Component<{ children: ReactNode }, { failed: boolean }> {
+  state = { failed: false }
+  static getDerivedStateFromError() {
+    return { failed: true }
+  }
+  componentDidCatch() {
+    motion.canvasReady = true
+  }
+  render() {
+    return this.state.failed ? <div className="webgl webgl--fallback" aria-hidden /> : this.props.children
+  }
+}
 
-// Types
-import type { Project } from "./data/projects";
+function useGlobalEffects() {
+  const setActive = useUI((s) => s.setActive)
+
+  useEffect(() => initScroll(), [])
+
+  useEffect(() => {
+    const onMove = (e: PointerEvent) => {
+      motion.mouse.x = (e.clientX / innerWidth) * 2 - 1
+      motion.mouse.y = -((e.clientY / innerHeight) * 2 - 1)
+    }
+    addEventListener('pointermove', onMove, { passive: true })
+    return () => removeEventListener('pointermove', onMove)
+  }, [])
+
+  // Reveal-on-scroll for every [data-reveal] element.
+  useEffect(() => {
+    const io = new IntersectionObserver(
+      (entries) =>
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add('is-in')
+            io.unobserve(e.target)
+          }
+        }),
+      { threshold: 0.12, rootMargin: '0px 0px -8% 0px' },
+    )
+    // Also catch elements rendered later (hot reloads, conditional content),
+    // otherwise they would stay hidden forever.
+    const scan = () => document.querySelectorAll('[data-reveal]:not(.is-in)').forEach((el) => io.observe(el))
+    scan()
+    const root = document.querySelector('.content')
+    const mo = new MutationObserver(scan)
+    if (root) mo.observe(root, { childList: true, subtree: true })
+    return () => {
+      io.disconnect()
+      mo.disconnect()
+    }
+  }, [])
+
+  // Active section = the one crossing the middle of the viewport.
+  useEffect(() => {
+    const io = new IntersectionObserver(
+      (entries) =>
+        entries.forEach((e) => {
+          if (e.isIntersecting) setActive(e.target.id as SectionId)
+        }),
+      { rootMargin: '-45% 0px -54% 0px' },
+    )
+    sections.forEach((s) => {
+      const el = document.getElementById(s.id)
+      if (el) io.observe(el)
+    })
+    return () => io.disconnect()
+  }, [setActive])
+}
 
 export default function App() {
-  // Mount smooth scrolling
-  useLenis();
-
-  // App states
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [currentRoute, setCurrentRoute] = useState<"/" | "/projects/trust-platform">("/");
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [activeProject, setActiveProject] = useState<Project | null>(null);
-
-  // Smooth route redirects
-  const navigateTo = (path: "/" | "/projects/trust-platform") => {
-    window.scrollTo({ top: 0, behavior: "instant" });
-    setCurrentRoute(path);
-  };
-
+  useGlobalEffects()
+  const ready = useUI((s) => s.ready)
   return (
     <>
-      {/* 1. Global Interactive Cursor & Spotlight */}
-      <CustomCursor />
-
-      {/* 2. Welcome Startup Loader */}
-      {!isLoaded && <Loading onComplete={() => setIsLoaded(true)} />}
-
-      {/* 3. Layered Background canvas */}
-      <BackgroundSystem />
-
-      {/* Main Container */}
-      {isLoaded && (
-        <div className="relative min-h-screen text-soft-white select-none">
-          
-          {/* Header Navbar */}
-          <Navbar onSearchClick={() => setIsSearchOpen(true)} />
-
-          {/* Search Command Palette Overlay */}
-          <CommandPalette isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
-
-          {/* Secondary Projects Detail Modal */}
-          <ProjectModal project={activeProject} onClose={() => setActiveProject(null)} />
-
-          {/* Routed Views */}
-          <AnimatePresence mode="wait">
-            {currentRoute === "/" ? (
-              <div key="portfolio-home">
-                {/* Hero vision */}
-                <Hero />
-
-                {/* Chapter 1: About */}
-                <About />
-
-                {/* Chapter 2: Now building status board */}
-                <CurrentlyBuilding />
-
-                {/* Chapter 3: Skills Orbit Board */}
-                <Skills />
-
-                {/* Chapter 4: Projects */}
-                <Projects 
-                  onProjectSelect={(proj) => setActiveProject(proj)} 
-                  onFlagshipSelect={() => navigateTo("/projects/trust-platform")}
-                />
-
-                {/* Chapter 5: Professional Journey */}
-                <Experience />
-
-                {/* Chapter 5.5: Leadership and Social Impact */}
-                <LeadershipSocialImpact />
-
-                {/* Chapter 6: Certifications Flip Matrix */}
-                <Certifications />
-
-                {/* Chapter 6.5: Milestones & Honors */}
-                <Achievements />
-
-                {/* Chapter 7: GitHub Dashboard */}
-                <GitHubStats />
-
-                {/* Chapter 8: Research Roadmap */}
-                <FutureRoadmap />
-
-                {/* Chapter 8.5: System Changelog */}
-                <VersionHistory />
-
-                {/* Chapter 9: Contact */}
-                <Contact />
-
-                {/* Footer notes */}
-                <Footer />
-              </div>
-            ) : (
-              <div key="flagship-case-study">
-                {/* Flagship Case Study deep dive */}
-                <TrustShowcase onBack={() => navigateTo("/")} />
-                
-                {/* Footer notes */}
-                <Footer />
-              </div>
-            )}
-          </AnimatePresence>
-        </div>
-      )}
+      <WebGLBoundary>
+        <Suspense fallback={null}>
+          <Scene />
+        </Suspense>
+      </WebGLBoundary>
+      <div className="grain" aria-hidden />
+      <Loader />
+      <Cursor />
+      <div className={`chrome ${ready ? 'is-ready' : ''}`}>
+        <Nav />
+        <Rail />
+      </div>
+      <main className="content">
+        <Hero />
+        <About />
+        <Experience />
+        <Projects />
+        <Skills />
+        <Workspace />
+        <Achievements />
+        <Interests />
+        <Inspirations />
+        <Contact />
+      </main>
+      <DeskPanel />
     </>
-  );
+  )
 }

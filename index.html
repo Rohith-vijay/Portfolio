@@ -1,27 +1,25 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- Primary SEO Metadata -->
-    <title>Komma Rohith Vijay | Principal Software Engineer &amp; Full-Stack Developer</title>
-    <meta name="description" content="Official digital platform of Komma Rohith Vijay. Computer Science Engineering student, Full-Stack Developer, and Backend Specialist building scalable software with real-world impact." />
-    <meta name="keywords" content="Komma Rohith Vijay, Rohith Vijay, Portfolio, Software Engineer, Spring Boot, React, Developer, AI Agents, Backend Engineer, Java, SQL, Bangalore" />
-    <meta name="author" content="Komma Rohith Vijay" />
-
-    <!-- OpenGraph Social Metadata -->
-    <meta property="og:title" content="Komma Rohith Vijay | Principal Software Engineer &amp; Full-Stack Developer" />
-    <meta property="og:description" content="Building Scalable Software That Creates Real-World Impact. Explore Spring Boot and React case studies." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://github.com/Rohith-vijay" />
-
-    <!-- Performance: Preconnect to Font Engines -->
+    <title>Komma Rohith Vijay — Backend Engineer</title>
+    <meta name="description" content="Komma Rohith Vijay — Backend engineer (Java, Spring Boot, microservices, Generative AI). B.Tech CSE at KL University, VP of Technology at K.V.G. Shanmuka Sai Charitable Trust." />
+    <meta name="theme-color" content="#05060f" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%2305060f'/><circle cx='32' cy='32' r='14' fill='none' stroke='%234cf2ff' stroke-width='4'/><circle cx='32' cy='32' r='5' fill='%23ff3dbb'/></svg>" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script>
+      try {
+        var t = localStorage.getItem('theme');
+        if (!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    </script>
   </head>
   <body>
+    <a class="skip-link" href="#about">Skip to content</a>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

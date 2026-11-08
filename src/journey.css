@@ -1,0 +1,504 @@
+/* ================================================================
+   Light-journey motif (rail, loader), Trust, Projects grid,
+   Olympiads, Interests and Inspirations.
+   ================================================================ */
+:root,
+:root[data-theme='dark'] {
+  --sun: #ffb347;
+  --sun-hot: #fff1c9;
+  --ray: linear-gradient(180deg, #fff1c9 0%, #ffc857 30%, #ff8a3d 70%, #ff3dbb 100%);
+}
+:root[data-theme='light'] {
+  --sun: #e07a00;
+  --sun-hot: #ffcf70;
+  --ray: linear-gradient(180deg, #ffb000 0%, #e07a00 45%, #d6157a 100%);
+}
+
+@keyframes sun-breathe {
+  50% {
+    box-shadow: 0 0 30px 4px var(--sun);
+  }
+}
+@keyframes beam-sweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  45%,
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* ---------------------------------------------------------------- Rail = the ray */
+.rail__fill {
+  background: var(--ray);
+  box-shadow: 0 0 8px var(--sun);
+  width: 2px;
+  left: -0.5px;
+}
+.rail__photon {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 9px;
+  height: 9px;
+  margin: -4.5px 0 0 -4.5px;
+  border-radius: 50%;
+  background: var(--sun-hot);
+  box-shadow:
+    0 0 10px 2px var(--sun),
+    0 0 26px 6px color-mix(in srgb, var(--sun) 50%, transparent);
+}
+.rail__sun {
+  position: absolute;
+  right: -5px;
+  top: -32px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--sun-hot) 0 30%, var(--sun) 58%, transparent 72%);
+  box-shadow: 0 0 22px var(--sun);
+  animation: sun-breathe 3.2s ease-in-out infinite;
+}
+.rail__stop.is-past i {
+  border-color: var(--sun);
+}
+.rail__stop.is-active i {
+  background: var(--sun);
+  box-shadow: 0 0 14px var(--sun);
+}
+.hud__dot {
+  background: var(--sun);
+  box-shadow: 0 0 10px var(--sun);
+}
+
+/* Loader: a sun inside the orbits */
+.loader__sun {
+  position: absolute;
+  inset: 34px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--sun-hot) 0 30%, var(--sun) 65%, transparent 72%);
+  box-shadow: 0 0 24px var(--sun);
+  animation: sun-breathe 2s ease-in-out infinite;
+}
+
+/* ---------------------------------------------------------------- Trust */
+.trust {
+  display: grid;
+  gap: 14px;
+}
+.trust__head {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+.trust__logo {
+  flex: 0 0 auto;
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  padding: 4px;
+  background: conic-gradient(from 0deg, var(--sun), #c08a4a, var(--sun-hot), var(--sun));
+  box-shadow: 0 0 34px -4px color-mix(in srgb, var(--sun) 70%, transparent);
+  animation: halo-spin 12s linear infinite;
+}
+.trust__logo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fff;
+  animation: halo-spin 12s linear infinite reverse;
+}
+@keyframes halo-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.trust__role {
+  margin-top: 6px;
+}
+.badge--amber {
+  color: var(--amber);
+  border-color: color-mix(in srgb, var(--amber) 45%, transparent);
+  background: color-mix(in srgb, var(--amber) 10%, transparent);
+}
+.trust__stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 12px 0;
+  border-block: 1px dashed var(--border-strong);
+}
+.trust__stats div {
+  display: grid;
+}
+.trust__stats strong {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+  line-height: 1.1;
+  color: var(--sun);
+}
+.trust__stats span {
+  font-size: 0.74rem;
+  color: var(--muted);
+}
+.trust__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.hats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.hat {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  transition:
+    transform 0.4s var(--ease-out),
+    box-shadow 0.4s;
+}
+.hat:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--sun) 40%, transparent),
+    0 0 30px -8px var(--sun);
+}
+.hat > span:last-child {
+  display: grid;
+  gap: 2px;
+  line-height: 1.4;
+  font-size: 0.9rem;
+}
+.hat__icon {
+  flex: 0 0 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  color: var(--sun);
+  background: color-mix(in srgb, var(--sun) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--sun) 35%, transparent);
+}
+.metrics--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* ---------------------------------------------------------------- Projects: new accents + viz */
+.project--green article {
+  border-top: 2px solid var(--green);
+}
+.project--amber article {
+  border-top: 2px solid var(--amber);
+}
+.project--green .project__highlights li::before {
+  color: var(--green);
+}
+.project--amber .project__highlights li::before {
+  color: var(--amber);
+}
+.project__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.flow--roles .flow__node:last-child > span {
+  border-color: var(--green);
+  color: var(--green);
+}
+.flow--roles .flow__link b,
+.flow--roles .flow__node:nth-child(2) .flow__link b {
+  background: var(--green);
+  box-shadow: 0 0 10px var(--green);
+}
+.llist {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+}
+.llist__head {
+  color: var(--muted);
+}
+.llist__head::after,
+.llist__node::after {
+  content: '→';
+  margin-left: 6px;
+  color: var(--amber);
+}
+.llist__node {
+  display: inline-flex;
+  align-items: center;
+  animation: node-in 3.6s var(--ease-out) infinite;
+  animation-delay: calc(var(--i) * 0.35s);
+}
+.llist__node b,
+.llist__node i {
+  padding: 6px 8px;
+  border: 1px solid var(--border-strong);
+  font-style: normal;
+  font-weight: 500;
+}
+.llist__node b {
+  border-radius: 8px 0 0 8px;
+  background: var(--surface-hover);
+}
+.llist__node i {
+  border-left: 0;
+  border-radius: 0 8px 8px 0;
+  color: var(--amber);
+}
+.llist__null {
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px dashed var(--amber);
+  color: var(--amber);
+}
+@keyframes node-in {
+  0% {
+    opacity: 0.25;
+    transform: translateY(4px);
+  }
+  15%,
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------------------------------------------------------------- Olympiads */
+.olympiads {
+  display: grid;
+  gap: 14px;
+}
+.olympiads__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.medal--rank {
+  grid-column: 1 / -1;
+  padding-top: 14px;
+  border-top: 1px dashed var(--border-strong);
+}
+@media (max-width: 1100px) {
+  .hud {
+    display: none;
+  }
+}
+
+/* Five social links: one row on desktop, 3 + 2 on tablets. */
+@media (min-width: 901px) {
+  .socials {
+    grid-template-columns: repeat(5, 1fr);
+    max-width: 1100px;
+  }
+}
+@media (min-width: 901px) and (max-width: 1180px) {
+  .socials {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.medal {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.medal > span:last-child {
+  display: grid;
+  line-height: 1.35;
+  font-size: 0.86rem;
+}
+.medal__disc {
+  position: relative;
+  flex: 0 0 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  color: #4a2a00;
+  background: radial-gradient(circle at 35% 30%, #fff6cf, #ffd34d 40%, #c98a12 75%, #8a5a00);
+  box-shadow:
+    inset 0 0 0 3px rgba(255, 255, 255, 0.35),
+    0 6px 20px -6px rgba(255, 180, 40, 0.7);
+  overflow: hidden;
+}
+.medal__disc::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 35%, rgba(255, 255, 255, 0.75) 50%, transparent 65%);
+  transform: translateX(-120%);
+  animation: beam-sweep 3.8s var(--ease-in-out) infinite;
+}
+.medal--rank .medal__disc {
+  color: #fff;
+  background: var(--grad);
+  box-shadow:
+    inset 0 0 0 3px rgba(255, 255, 255, 0.25),
+    var(--glow);
+}
+
+/* ---------------------------------------------------------------- Trust: link to project */
+.link-more {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  color: var(--cyan);
+  background: none;
+  border: 0;
+  padding: 4px 0;
+  cursor: pointer;
+}
+.link-more:hover {
+  text-decoration: underline;
+}
+
+/* ---------------------------------------------------------------- Projects grid */
+.project--violet article {
+  border-top: 2px solid var(--violet);
+}
+.project--violet .project__highlights li::before {
+  color: var(--violet);
+}
+@media (min-width: 1000px) {
+  .projects--grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .projects--grid .project--featured {
+    grid-column: 1 / -1;
+  }
+  .projects--grid .project:not(.project--featured) .project__name {
+    font-size: clamp(1.6rem, 2.4vw, 2.2rem);
+  }
+  .project--featured .project__desc,
+  .project--featured .project__highlights {
+    max-width: 82ch;
+  }
+}
+
+/* ---------------------------------------------------------------- Interests: five equal cards */
+.interest-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 16px;
+}
+.interest {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 22px;
+  border-radius: var(--radius);
+  transition:
+    transform 0.4s var(--ease-out),
+    box-shadow 0.4s;
+}
+/* Centre the second row (cards 4 and 5) so no card stands out. */
+.interest:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+.interest:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--glow);
+}
+.interest__icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-size: 1.35rem;
+  background: var(--surface-hover);
+  border: 1px solid var(--border);
+}
+.interest__title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.interest__foot {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .interest-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .interest:nth-child(4) {
+    grid-column: span 2;
+  }
+  .interest:nth-child(5) {
+    grid-column: 2 / span 2;
+  }
+}
+
+/* ---------------------------------------------------------------- Inspirations (placeholder) */
+.soon {
+  display: grid;
+  gap: 16px;
+  justify-items: start;
+}
+.soon__frames {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.soon__frames i {
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-sm);
+  border: 1px dashed var(--border-strong);
+  background: linear-gradient(110deg, transparent 30%, var(--surface-hover) 50%, transparent 70%) 0 0 / 250% 100%;
+  animation: shimmer 2.4s linear infinite;
+}
+.soon__frames i:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.soon__frames i:nth-child(3) {
+  animation-delay: 0.6s;
+}
+@keyframes shimmer {
+  to {
+    background-position: -250% 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .interest-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+  .interest,
+  .interest:nth-child(4),
+  .interest:nth-child(5) {
+    grid-column: auto;
+  }
+  .hats,
+  .olympiads__row {
+    grid-template-columns: 1fr;
+  }
+  .trust__stats,
+  .metrics--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .trust__head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
